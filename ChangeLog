@@ -1,6 +1,13 @@
+2002-01-04  Albrecht Gebhardt  <albrecht.gebhardt@uni-klu.ac.at>
+
+	* /usr/local/cvsroot/sgeostat/DESCRIPTION: next release
+
+	* /usr/local/cvsroot/sgeostat/man/identify.point.Rd, /usr/local/cvsroot/sgeostat/man/plot.point.Rd, /usr/local/cvsroot/sgeostat/man/plot.variogram.Rd, /usr/local/cvsroot/sgeostat/R/est.variogram.R, /usr/local/cvsroot/sgeostat/R/export.point.R, /usr/local/cvsroot/sgeostat/R/fit.exponential.R, /usr/local/cvsroot/sgeostat/R/fit.gaussian.R, /usr/local/cvsroot/sgeostat/R/fit.linear.R, /usr/local/cvsroot/sgeostat/R/fit.spherical.R, /usr/local/cvsroot/sgeostat/R/fit.trend.R, /usr/local/cvsroot/sgeostat/R/fit.wave.R, /usr/local/cvsroot/sgeostat/R/identify.point.R, /usr/local/cvsroot/sgeostat/R/krige.R, /usr/local/cvsroot/sgeostat/R/lagplot.R, /usr/local/cvsroot/sgeostat/R/pair.R, /usr/local/cvsroot/sgeostat/R/plot.point.R, /usr/local/cvsroot/sgeostat/R/plot.variogram.R, /usr/local/cvsroot/sgeostat/R/spacebox.R:
+	final corrections for 1.4.0
+
 2001-12-29  Albrecht Gebhardt  <albrecht.gebhardt@uni-klu.ac.at>
 
-	* /usr/local/cvsroot/sgeostat/DESCRIPTION, /usr/local/cvsroot/sgeostat/man/fit.variogram.Rd, /usr/local/cvsroot/sgeostat/man/identify.point.Rd, /usr/local/cvsroot/sgeostat/man/plot.point.Rd, /usr/local/cvsroot/sgeostat/man/plot.variogram.Rd, /usr/local/cvsroot/sgeostat/man/print.pair.Rd, /usr/local/cvsroot/sgeostat/man/print.point.Rd, /usr/local/cvsroot/sgeostat/man/spacebox.Rd, /usr/local/cvsroot/sgeostat/man/spacecloud.Rd, /usr/local/cvsroot/sgeostat/R/identify.point.R, /usr/local/cvsroot/sgeostat/R/plot.point.R, /usr/local/cvsroot/sgeostat/R/plot.variogram.R, /usr/local/cvsroot/sgeostat/R/print.pair.R, /usr/local/cvsroot/sgeostat/R/print.point.R, /usr/local/cvsroot/sgeostat/R/spacebox.R:
+	* /usr/local/cvsroot/sgeostat/man/fit.variogram.Rd, /usr/local/cvsroot/sgeostat/man/print.pair.Rd, /usr/local/cvsroot/sgeostat/man/print.point.Rd, /usr/local/cvsroot/sgeostat/man/spacebox.Rd, /usr/local/cvsroot/sgeostat/man/spacecloud.Rd, /usr/local/cvsroot/sgeostat/R/print.pair.R, /usr/local/cvsroot/sgeostat/R/print.point.R:
 	changes for R 1.4.0, mostly documentation, some "..." issues and generic
 	method problems
 
@@ -11,7 +18,7 @@
 
 2001-08-09  Albrecht Gebhardt  <albrecht.gebhardt@uni-klu.ac.at>
 
-	* /usr/local/cvsroot/sgeostat/man/sgeostat-internal.Rd, /usr/local/cvsroot/sgeostat/data/00Index, /usr/local/cvsroot/sgeostat/INDEX, /usr/local/cvsroot/sgeostat/man/est.variogram.Rd, /usr/local/cvsroot/sgeostat/man/fit.trend.Rd, /usr/local/cvsroot/sgeostat/man/in.chull.Rd, /usr/local/cvsroot/sgeostat/man/in.polygon.Rd, /usr/local/cvsroot/sgeostat/man/krige.Rd, /usr/local/cvsroot/sgeostat/man/lagplot.Rd, /usr/local/cvsroot/sgeostat/man/maas.bank.Rd, /usr/local/cvsroot/sgeostat/man/maas.Rd, /usr/local/cvsroot/sgeostat/man/pair.Rd, /usr/local/cvsroot/sgeostat/man/point.Rd, /usr/local/cvsroot/sgeostat/R/est.variogram.R, /usr/local/cvsroot/sgeostat/R/fit.exponential.R, /usr/local/cvsroot/sgeostat/R/fit.gaussian.R, /usr/local/cvsroot/sgeostat/R/fit.linear.R, /usr/local/cvsroot/sgeostat/R/fit.spherical.R, /usr/local/cvsroot/sgeostat/R/fit.variogram.R, /usr/local/cvsroot/sgeostat/R/fit.wave.R, /usr/local/cvsroot/sgeostat/R/krige.R, /usr/local/cvsroot/sgeostat/R/zzz.R:
+	* /usr/local/cvsroot/sgeostat/man/sgeostat-internal.Rd, /usr/local/cvsroot/sgeostat/data/00Index, /usr/local/cvsroot/sgeostat/INDEX, /usr/local/cvsroot/sgeostat/man/est.variogram.Rd, /usr/local/cvsroot/sgeostat/man/fit.trend.Rd, /usr/local/cvsroot/sgeostat/man/in.chull.Rd, /usr/local/cvsroot/sgeostat/man/in.polygon.Rd, /usr/local/cvsroot/sgeostat/man/krige.Rd, /usr/local/cvsroot/sgeostat/man/lagplot.Rd, /usr/local/cvsroot/sgeostat/man/maas.bank.Rd, /usr/local/cvsroot/sgeostat/man/maas.Rd, /usr/local/cvsroot/sgeostat/man/pair.Rd, /usr/local/cvsroot/sgeostat/man/point.Rd, /usr/local/cvsroot/sgeostat/R/fit.variogram.R, /usr/local/cvsroot/sgeostat/R/zzz.R:
 	cvsroot recovery. finished.
 
 2001-03-11  Albrecht Gebhardt  <albrecht.gebhardt@uni-klu.ac.at>
@@ -25,9 +32,7 @@
 
 1999-04-20  Albrecht Gebhardt  <albrecht.gebhardt@uni-klu.ac.at>
 
-	* /usr/local/cvsroot/sgeostat/R/pair.R: renamed files
-
-	* /usr/local/cvsroot/sgeostat/man/print.pairs.Rd, /usr/local/cvsroot/sgeostat/man/pairs.Rd, /usr/local/cvsroot/sgeostat/R/spacecloud.R, /usr/local/cvsroot/sgeostat/R/print.pairs.R, /usr/local/cvsroot/sgeostat/R/pairs.R, /usr/local/cvsroot/sgeostat/R/lagplot.R, /usr/local/cvsroot/sgeostat/README:
+	* /usr/local/cvsroot/sgeostat/man/print.pairs.Rd, /usr/local/cvsroot/sgeostat/man/pairs.Rd, /usr/local/cvsroot/sgeostat/R/spacecloud.R, /usr/local/cvsroot/sgeostat/R/print.pairs.R, /usr/local/cvsroot/sgeostat/R/pairs.R, /usr/local/cvsroot/sgeostat/README:
 	Adopted for R 0.64.x, example() sections should now work.
 	Thanks to Roger Bivand <rsb@reclus.nhh.no> for providing solutions
 	to some of my errors.
@@ -41,7 +46,7 @@
 
 1998-07-16  Albrecht Gebhardt  <albrecht.gebhardt@uni-klu.ac.at>
 
-	* /usr/local/cvsroot/sgeostat/R/which.na.R, /usr/local/cvsroot/sgeostat/R/export.point.R:
+	* /usr/local/cvsroot/sgeostat/R/which.na.R:
 	needed for R <-> S compatibility
 
 	* /usr/local/cvsroot/sgeostat/Changes: cleanup some files
@@ -54,10 +59,10 @@
 	* /usr/local/cvsroot/sgeostat/www-SGeoStat/DataStructures.html, /usr/local/cvsroot/sgeostat/www-SGeoStat/Download.html, /usr/local/cvsroot/sgeostat/www-SGeoStat/exponential.gif, /usr/local/cvsroot/sgeostat/www-SGeoStat/Fit.Exponential.html, /usr/local/cvsroot/sgeostat/www-SGeoStat/Functions.html, /usr/local/cvsroot/sgeostat/www-SGeoStat/Identify.Point.html, /usr/local/cvsroot/sgeostat/www-SGeoStat/Krige.html, /usr/local/cvsroot/sgeostat/www-SGeoStat/lagplot.gif, /usr/local/cvsroot/sgeostat/www-SGeoStat/Lagplot.html, /usr/local/cvsroot/sgeostat/www-SGeoStat/lagplot.query.gif, /usr/local/cvsroot/sgeostat/www-SGeoStat/Pairs.html, /usr/local/cvsroot/sgeostat/www-SGeoStat/Plot.Point.html, /usr/local/cvsroot/sgeostat/www-SGeoStat/Plot.Variogram.html, /usr/local/cvsroot/sgeostat/www-SGeoStat/Point.html, /usr/local/cvsroot/sgeostat/www-SGeoStat/Print.Pairs.html, /usr/local/cvsroot/sgeostat/www-SGeoStat/Print.Point.html, /usr/local/cvsroot/sgeostat/www-SGeoStat/spacebox.gif, /usr/local/cvsroot/sgeostat/www-SGeoStat/Spacebox.html, /usr/local/cvsroot/sgeostat/www-SGeoStat/spacecloud.gif, /usr/local/cvsroot/sgeostat/www-SGeoStat/Spacecloud.html, /usr/local/cvsroot/sgeostat/www-SGeoStat/stations.gif, /usr/local/cvsroot/sgeostat/www-SGeoStat/stations.inches.gif, /usr/local/cvsroot/sgeostat/www-SGeoStat/theta.gif, /usr/local/cvsroot/sgeostat/www-SGeoStat/variogram.f.gif, /usr/local/cvsroot/sgeostat/www-SGeoStat/Variogram.html, /usr/local/cvsroot/sgeostat/www-SGeoStat/weight.gif:
 	New file.
 
-	* /usr/local/cvsroot/sgeostat/R/fit.trend.R, /usr/local/cvsroot/sgeostat/R/point.R, /usr/local/cvsroot/sgeostat/www-SGeoStat/homepage.html, /usr/local/cvsroot/sgeostat/www-SGeoStat/Introduction.html, /usr/local/cvsroot/sgeostat/www-SGeoStat/OOPLa.html, /usr/local/cvsroot/sgeostat/www-SGeoStat/variogram.gif:
+	* /usr/local/cvsroot/sgeostat/R/point.R, /usr/local/cvsroot/sgeostat/www-SGeoStat/homepage.html, /usr/local/cvsroot/sgeostat/www-SGeoStat/Introduction.html, /usr/local/cvsroot/sgeostat/www-SGeoStat/OOPLa.html, /usr/local/cvsroot/sgeostat/www-SGeoStat/variogram.gif:
 	Imported Sources
 
-	* /usr/local/cvsroot/sgeostat/R/fit.trend.R, /usr/local/cvsroot/sgeostat/R/point.R, /usr/local/cvsroot/sgeostat/www-SGeoStat/homepage.html, /usr/local/cvsroot/sgeostat/www-SGeoStat/Introduction.html, /usr/local/cvsroot/sgeostat/www-SGeoStat/OOPLa.html, /usr/local/cvsroot/sgeostat/www-SGeoStat/variogram.gif:
+	* /usr/local/cvsroot/sgeostat/R/point.R, /usr/local/cvsroot/sgeostat/www-SGeoStat/homepage.html, /usr/local/cvsroot/sgeostat/www-SGeoStat/Introduction.html, /usr/local/cvsroot/sgeostat/www-SGeoStat/OOPLa.html, /usr/local/cvsroot/sgeostat/www-SGeoStat/variogram.gif:
 	New file.
 
 	* /usr/local/cvsroot/sgeostat/COPYING, /usr/local/cvsroot/sgeostat/data/maas.bank.R, /usr/local/cvsroot/sgeostat/data/maas.R, /usr/local/cvsroot/sgeostat/digi.R, /usr/local/cvsroot/sgeostat/maas.dig, /usr/local/cvsroot/sgeostat/zn_map.eps, /usr/local/cvsroot/sgeostat/zn_map.gif, /usr/local/cvsroot/sgeostat/zn_map.ps:

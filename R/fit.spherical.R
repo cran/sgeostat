@@ -69,7 +69,7 @@ function (v.object, c0 = NULL, cs = NULL, as = NULL, type = "c",
                 v.m.object <- list(parameters = parameters, model = spherical.v)
                 attr(v.m.object, "class") <- "variogram.model"
                 attr(v.m.object, "type") <- "spherical"
-                plot(v.object, v.m.object, type = type)
+                plot(v.object, var.mod.obj=v.m.object, type = type)
         }
         while (loop) {
                 cat("Iteration:", i, "\n")
@@ -124,7 +124,7 @@ function (v.object, c0 = NULL, cs = NULL, as = NULL, type = "c",
                 attr(v.m.object, "class") <- "variogram.model"
                 attr(v.m.object, "type") <- "spherical"
                 if (plot.it) 
-                        plot(v.object, v.m.object, type = type)
+                        plot(v.object, var.mod.obj=v.m.object, type = type)
                 parameters1 <- parameters
                 parameters <- parameters.old
         }

@@ -40,7 +40,7 @@ function(v.object,type='c',plot.it=FALSE,iterations=1,c0=0,cl=1){
   attr(v.m.object,'class') <- 'variogram.model'
   attr(v.m.object,'type') <- 'linear'
   if (plot.it)
-    plot(v.object,v.m.object)
+    plot(v.object,var.mod.obj=v.m.object)
 
   return(v.m.object)
   

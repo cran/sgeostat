@@ -1,7 +1,7 @@
 ################
 #  Create a plotting routine for variograms...
 assign("plot.variogram",	
-function(x,...,var.mod.obj=NULL,title.str=NULL,ylim,type='c',N=FALSE) {
+function(x,var.mod.obj=NULL,title.str=NULL,ylim,type='c',N=FALSE,...) {
 
 #  oldpar <- par()
 #  par(mfrow=c(2,1),lab=c(12,5,7), #lab=c(length(x$lag),5,7),

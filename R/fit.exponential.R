@@ -61,7 +61,7 @@ function(v.object,c0=NULL,ce=NULL,ae=NULL,type='c',iterations=10,
     attr(v.m.object,'class') <- 'variogram.model'
     attr(v.m.object,'type') <- 'exponential'
 
-    plot(v.object,v.m.object,type=type)
+    plot(v.object,var.mod.obj=v.m.object,type=type)
   }
 
   while (loop) {
@@ -123,7 +123,7 @@ function(v.object,c0=NULL,ce=NULL,ae=NULL,type='c',iterations=10,
     attr(v.m.object,'class') <- 'variogram.model'
     attr(v.m.object,'type') <- 'exponential'
     if (plot.it)
-      plot(v.object,v.m.object,type=type)
+      plot(v.object,var.mod.obj=v.m.object,type=type)
   }
   if (converge) 
     cat('Final parameter estimates: ',parameters,'\n\n')
