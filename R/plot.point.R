@@ -1,36 +1,36 @@
 # A plot function for the "point" class of objects
 assign("plot.point",
-function (point.obj,a,axes=T,xlab='',ylab='',legend.pos=0,add=F,...) {
+function (x,...,v,legend.pos=0,axes=TRUE,xlab='',ylab='',add=FALSE) {
 # Be careful to plot in a square region.  We can't distort the earth!
 # I can't seem to force Splus to use the same scaling on both axes!
 # But we must find a way!
   old.par <- par(pty='s')
-  xdiff _ max(point.obj$x) - min(point.obj$x)
-  ydiff _ max(point.obj$y) - min(point.obj$y)
+  xdiff _ max(x$x) - min(x$x)
+  ydiff _ max(x$y) - min(x$y)
   if (xdiff < ydiff) {
 #   Set up our limits so that there are ydiff units on x and y...
-    ylimits _ c(min(point.obj$y),max(point.obj$y))
-    xlimits _ c((min(point.obj$x) + xdiff/2) - ydiff/2,
-                (min(point.obj$x) + xdiff/2) + ydiff/2)
+    ylimits _ c(min(x$y),max(x$y))
+    xlimits _ c((min(x$x) + xdiff/2) - ydiff/2,
+                (min(x$x) + xdiff/2) + ydiff/2)
   }
   else {
-    xlimits _ c(min(point.obj$x),max(point.obj$x))
-    ylimits _ c((min(point.obj$y) + ydiff/2) - xdiff/2,
-                (min(point.obj$y) + ydiff/2) + xdiff/2)
+    xlimits _ c(min(x$x),max(x$x))
+    ylimits _ c((min(x$y) + ydiff/2) - xdiff/2,
+                (min(x$y) + ydiff/2) + xdiff/2)
   }
-  if (!missing(a)) {
-    a.name<-a
-    a <- point.obj[[match(a,names(point.obj))]]
-#    colors <- cut(a,c(min(a)-1,quantile(a,c(.25,.5,.75,1))))
-    a.q<-quantile(a,c(.25,.5,.75,1))	
+  if (!missing(v)) {
+    v.name<-v
+    v <- x[[match(v,names(x))]]
+#    colors <- cut(v,c(min(v)-1,quantile(v,c(.25,.5,.75,1))))
+    v.q<-quantile(v,c(.25,.5,.75,1))	
     qcol<-c(3,7,2,6) # green, yellow, red, cyan
-    colors <- cut(a,c(min(a)-1,a.q),labels=c(1:4))
+    colors <- cut(v,c(min(v)-1,v.q),labels=c(1:4))
     if(!add){
-      plot(point.obj$x,point.obj$y, axes=axes,xlab=xlab,ylab=ylab,type='n',
+      plot(x$x,x$y, axes=axes,xlab=xlab,ylab=ylab,type='n',
            xlim=xlimits,ylim=ylimits)
     }
     for (i in as.numeric(unique(colors))){
-      points(point.obj$x[colors==i],point.obj$y[colors==i],col=qcol[i],...)
+      points(x$x[colors==i],x$y[colors==i],col=qcol[i],...)
 }
     if (legend.pos!=0){
       l.x<-switch(legend.pos,
@@ -43,23 +43,23 @@ function (point.obj,a,axes=T,xlab='',ylab='',legend.pos=0,add=F,...) {
       l.yj<-switch(legend.pos,0,0,1,1)
       legend(l.x,
 	     l.y,
-	     c(paste("[",min(a),",",a.q[1],"]"),
-	       paste("(",a.q[1],",",a.q[2],"]"),
-	       paste("(",a.q[2],",",a.q[3],"]"),
-	       paste("(",a.q[3],",",max(a),"]")),
+	     c(paste("[",min(v),",",v.q[1],"]"),
+	       paste("(",v.q[1],",",v.q[2],"]"),
+	       paste("(",v.q[2],",",v.q[3],"]"),
+	       paste("(",v.q[3],",",max(v),"]")),
 	     qcol,
 	     xjust=l.xj,yjust=l.yj)
     }
-    title(deparse(substitute(point.obj)))
+    title(deparse(substitute(x)))
     
   }
   else {
     if(!add){
-      plot(point.obj$x,point.obj$y, axes=axes,xlab=xlab,ylab=ylab,
+      plot(x$x,x$y, axes=axes,xlab=xlab,ylab=ylab,
            xlim=xlimits,ylim=ylimits)
-      title(deparse(substitute(point.obj)))
+      title(deparse(substitute(x)))
     } else {
-      points(point.obj$x,point.obj$y)
+      points(x$x,x$y)
     }
   }
   invisible(par(old.par))

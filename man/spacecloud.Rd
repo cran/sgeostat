@@ -10,6 +10,7 @@
 \item{type}{either \code{'r'} for square-root differences or \code{'s'} for squared differences}
 \item{query.a}{an optional variable name, if entered, the value of the variable will be displayed on the graphics device for points
 identified by the user.}
+\item{...}{additional arguments for \code{plot}}
 }
 \value{NULL}
 \description{Create a scatter plot of square-root or squared differences between variable values at pairs of points versus the distance

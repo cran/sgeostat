@@ -12,6 +12,7 @@ fit.spherical(v.object, c0, cs, as, type='c', iterations=10,
 fit.wave(v.object, c0, cw, aw, type='c', 
          iterations=10, tolerance=1e-06, echo=F,  plot.it=F, weighted=T)
 fit.linear(v.object, type='c', plot.it=F,iterations=1, c0=0, cl=1)}
+\alias{fit.variogram}
 \alias{fit.exponential}
 \alias{fit.wave}
 \alias{fit.gaussian}
@@ -25,10 +26,14 @@ fit.linear(v.object, type='c', plot.it=F,iterations=1, c0=0, cl=1)}
 \item{nugget, sill, range, slope}{only available for \code{fit.variogram},
   initial estimates for specified variogram model (\code{slope} only for
   \code{fit.linear})}
-\item{c0, ce, ae}{initial estimates for the exponential variogram model}
-\item{c0, cg, ag}{initial estimates for the gaussian variogram model}
-\item{c0, cs, as}{initial estimates for the sperical variogram model}
-\item{c0, cw, aw}{initial estimates for the periodical variogram model}
+\item{c0}{initial estimate for nugget effect, valid for all variogram
+  types, partial sill (\code{cX}) and (asymptotical) range (\code{aX})
+  as follows:}
+\item{ce, ae}{initial estimates for the exponential variogram model}
+\item{cg, ag}{initial estimates for the gaussian variogram model}
+\item{cs, as}{initial estimates for the sperical variogram model}
+\item{cw, aw}{initial estimates for the periodical variogram model}
+\item{cl}{initial estimates for the linear variogram model (slope)}
 \item{type}{one of \code{'c'} (classic), \code{'r'} (robust), \code{'m'} (median). Indicates to which type of empirical variogram estimate the model is
 to be fit.}
 \item{iterations}{the number of iterations of the fitting procedure to execute.}
@@ -36,7 +41,10 @@ to be fit.}
 \item{delta}{initial stepsize (relative) for pseudo Newton approximation, applies only to \code{fit.spherical}}
 \item{echo}{if T, be verbose.}
 \item{plot.it}{if T, the variogram estimate will be plotted each iteration.}
-\item{weighted}{if T, the fit will be done using weighted least squares, where the weightes are given in Cressie (1991, p. 99)}
+\item{weighted}{if T, the fit will be done using weighted least squares,
+  where the weightes are given in Cressie (1991, p. 99)}
+\item{...}{only \code{fit.variogram}: additional parameters to hand
+  through to specific model fit functions}
 }
 \value{A variogram.model object:
 \item{parameters}{vector of fitted model parameters}

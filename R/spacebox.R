@@ -1,6 +1,6 @@
 # spacebox.s creates a box plot of squared or square root difference plots...
 assign("spacebox",
-function(point.obj,pair.obj,a1,a2,type='r',...) {
+function(point.obj,pair.obj,a1,a2,type='r') {
 
   if (!inherits(point.obj,"point")) stop('Point.obj must be of class, "point".\n')
 
