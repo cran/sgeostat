@@ -2,11 +2,11 @@
 \title{maas.bank - coordinates}
 \usage{maas.bank}
 \description{
-Coordinates of maas bank. To be used together with \link{\code{maas}}.
+Coordinates of maas bank. To be used together with \code{\link{maas}}.
 }
 \value{list with components \code{x} and\code{y}..
 }
-\seealso{\link{\code{maas}}
+\seealso{\code{\link{maas}}}
 \references{
   gstat
   E.J Pebesma (E.J.Pebesma@frw.uva.nl) 

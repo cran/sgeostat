@@ -61,5 +61,5 @@ maas.vmod<-fit.gaussian(maas.v,c0=60000,cg=110000,ag=800,plot.it=T,
 iterations=30)
 }
 \references{
-\link{http://www.gis.iastate.edu/SGeoStat/homepage.html}
+http://www.gis.iastate.edu/SGeoStat/homepage.html
 }

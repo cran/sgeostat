@@ -14,7 +14,7 @@ the prediction at each point.}
 \value{A point object which is a copy of the prdpnt object with two new variables, \code{zhat} and \code{sigma2hat}, which are,
 repspectively, the predicted value and the kriging variance. }
 \description{Carry out spatial prediction (or kriging). }
-\seealso{\code{\link{}},}
+\seealso{\code{\link{est.variogram}},\code{\link{fit.variogram}}}
 \examples{
 \testonly{
 # prepare variables from other example pages if they are not already there:
@@ -43,7 +43,9 @@ op <- par(no.readonly = TRUE)
 par(pty="s")
 plot(grid$xy, type="n", xlim=c(grid$xr[1], grid$xr[1]+grid$max),
                     ylim=c(grid$yr[1], grid$yr[1]+grid$max))
-image(grid$x,grid$y,grid$krige$zhat, add=T)
+image(grid$x,grid$y,
+      matrix(grid$krige$zhat,length(grid$x),length(grid$y)),
+      add=T)
 contour(grid$x,grid$y,
         matrix(grid$krige$zhat,length(grid$x),length(grid$y)),
         add=T)
