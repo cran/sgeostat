@@ -14,7 +14,11 @@
 # prepare variables from other example pages if they are not already there:
 if(length(ls(pat="maas.point"))==0){example(point)}
 }
-identify(maas.point, 'id')
+plot(maas.point)
+# use indices as labels:
+identify(maas.point)
+# use values as labels:
+identify(maas.point,"zinc")
 }
 \references{
 http://www.gis.iastate.edu/SGeoStat/homepage.html

@@ -12,7 +12,7 @@
 \description{ Plot the spatial locations in a point object, optionally coloring by quantile.}
 \seealso{\code{\link{point}}}
 \examples{
-\examples{
+\testonly{
 if(length(ls(pat="maas.point"))==0){example(point)}
 }
 plot(maas.point) 

@@ -9,6 +9,7 @@
 \description{Print descriptive information about a point object.}
 \seealso{\code{\link{point}}}
 \examples{
+\testonly{
 if(length(ls(pat="maas.point"))==0){example(point)}
 }
 print.point(maas.point)
