@@ -1,15 +1,15 @@
 "fit.spherical" <-
 function (v.object, c0 = NULL, cs = NULL, as = NULL, type = "c", 
-        iterations = 10, tolerance = 1e-06, echo = F, plot.it = F, 
-        weighted = T, delta = 0.1) 
+        iterations = 10, tolerance = 1e-06, echo = FALSE, plot.it = FALSE, 
+        weighted = TRUE, delta = 0.1) 
 {
         # This program fits a univariate spherical model to an empirical variogram
         # estimate.  The SEMI variogram model is the model fit...
         if (!inherits(v.object, "variogram")) 
                 stop("v.object must be of class, \"variogram\".\n")
         if (is.null(c0) & is.null(cs) & is.null(as)) 
-                estimate.initial <- T
-        else estimate.initial <- F
+                estimate.initial <- TRUE
+        else estimate.initial <- FALSE
         # Interpret the "type" argument...
         if (!estimate.initial & (is.null(c0) | is.null(cs) | 
                 is.null(as))) 
@@ -56,12 +56,12 @@ function (v.object, c0 = NULL, cs = NULL, as = NULL, type = "c",
           parameters1 <- c(c0, cs, as) * (1 + delta/100)
           cat("Initial parameter estimates: \n first:", parameters, "\n second:", 
               parameters1,"\n")
-          loop <- T
-          converge <- F
+          loop <- TRUE
+          converge <- FALSE
           i <- 1
         } else {
-          loop <- F
-          converge <- F
+          loop <- FALSE
+          converge <- FALSE
           parameters1 <- parameters
         }
         # Plot it before we start if requested...
@@ -92,7 +92,7 @@ function (v.object, c0 = NULL, cs = NULL, as = NULL, type = "c",
                         print(cbind(y, xmat, w))
                 if (echo) 
                         cat("\n\n")
-                fit <- lsfit(xmat, y, wt = w, intercept = F)
+                fit <- lsfit(xmat, y, wt = w, intercept = FALSE)
                 # calculate the new parameter estimates...
                 parameters.old <- parameters
                 parameters <- fit$coef + parameters
@@ -112,13 +112,13 @@ function (v.object, c0 = NULL, cs = NULL, as = NULL, type = "c",
                 #    cat('rse.dif = ',rse.dif,'(rse =',rse,')\n\n')
                 #    if(rse.dif < tolerance & parm.dist < tolerance) {
                 if (abs(rse.dif) < tolerance) {
-                        loop <- F
-                        converge <- T
+                        loop <- FALSE
+                        converge <- TRUE
                         cat("Convergence achieved by sums of squares.\n")
                 }
                 i <- i + 1
                 if (i > iterations) {
-                        loop <- F
+                        loop <- FALSE
                 }
                 v.m.object <- list(parameters = parameters, model = spherical.v)
                 attr(v.m.object, "class") <- "variogram.model"

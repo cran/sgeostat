@@ -1,6 +1,6 @@
 
 assign("fit.trend",
-function (point.obj,at,np=2,plot.it=T) {
+function (point.obj,at,np=2,plot.it=TRUE) {
   if (!inherits(point.obj,"point")) stop('Point.Obj must be of class, "point".\n')
 
   if(missing(at)) stop('Must enter at least one attribute.\n')

@@ -1,5 +1,5 @@
 assign("fit.linear",
-function(v.object,type='c',plot.it=F,iterations=1,c0=0,cl=1){
+function(v.object,type='c',plot.it=FALSE,iterations=1,c0=0,cl=1){
   # This program fits a univariate linear model to an empirical variogram
   # estimate.  The SEMI variogram model is the model fit...
 

@@ -1,6 +1,6 @@
 # lagplot.s creates a lagplot for an object of type "point"
 assign("lagplot",
-function(point.obj,pair.obj,a1,a2,lag=1,std=F,query.a=NULL,xlim=NULL,ylim=NULL) {
+function(point.obj,pair.obj,a1,a2,lag=1,std=FALSE,query.a=NULL,xlim=NULL,ylim=NULL) {
 
   if (!inherits(point.obj,"point")) stop('Point.obj must be of class, "point".\n')
 
@@ -14,8 +14,8 @@ function(point.obj,pair.obj,a1,a2,lag=1,std=F,query.a=NULL,xlim=NULL,ylim=NULL) 
   att2 <- point.obj[[match(a2,names(point.obj))]]
 
   if(std) {
-    att1 <- (att1 - mean(att1,na.rm=T))/var(att1[!is.na(att1)])
-    att2 <- (att2 - mean(att2,na.rm=T))/var(att2[!is.na(att2)])
+    att1 <- (att1 - mean(att1,na.rm=TRUE))/var(att1[!is.na(att1)])
+    att2 <- (att2 - mean(att2,na.rm=TRUE))/var(att2[!is.na(att2)])
   }
 
   plot((att1[pair.obj$from])[pair.obj$lags==lag],

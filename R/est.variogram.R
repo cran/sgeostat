@@ -49,14 +49,14 @@ function(point.obj,pair.obj,a1,a2) {
     n[i] _ length(bo[[i]][!is.na(bo[[i]])])
 
 #   classic, see Matheron
-    classic[i] <- sum((bo[[i]])^2,na.rm=T) / n[i]
+    classic[i] <- sum((bo[[i]])^2,na.rm=TRUE) / n[i]
 
 #   robust & med, see Cressie, 1990
-    robust[i] <- (sum(abs(bo[[i]])^.5,na.rm=T) / n[i] )^4 / (0.457 + (0.494/n[i]))
-    med[i] <- (median(abs(bo[[i]])^.5,na.rm=T))^4 / (0.457 + (0.494/n[i]))
-#    med[i] <- median(abs(bo[[i]]),na.rm=T)
+    robust[i] <- (sum(abs(bo[[i]])^.5,na.rm=TRUE) / n[i] )^4 / (0.457 + (0.494/n[i]))
+    med[i] <- (median(abs(bo[[i]])^.5,na.rm=TRUE))^4 / (0.457 + (0.494/n[i]))
+#    med[i] <- median(abs(bo[[i]]),na.rm=TRUE)
   }    
-  o.variogram <- data.frame(lags,bins=c(pair.obj$bins,recursive=T),classic,
+  o.variogram <- data.frame(lags,bins=c(pair.obj$bins,recursive=TRUE),classic,
                       robust,med,n=n)
   class(o.variogram) <- c("variogram","data.frame")
   return(o.variogram)

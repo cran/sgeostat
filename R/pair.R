@@ -23,9 +23,9 @@ function (point.obj,num.lags=10,type='isotropic',theta=0,dtheta=5,maxdist) {
 assign("pair.iso",
 function(point.obj,num.lags,maxdist) {
 # we only need some of the pairs...
-  max.entered <- T
+  max.entered <- TRUE
   if (maxdist < 0) {
-    max.entered <- F
+    max.entered <- FALSE
     maxdist <- ((max(point.obj$x)-min(point.obj$x))^2 + (max(point.obj$y)-min(point.obj$y))^2)^0.5
   }
 
@@ -54,7 +54,7 @@ function(point.obj,num.lags,maxdist) {
   if (n > 1000) cat('\n')
 
 # apply the maximum distance cutoff, if specified...
-  if (maxdist < 0) maxdist <- max(dist,na.rm=T)
+  if (maxdist < 0) maxdist <- max(dist,na.rm=TRUE)
   if (max.entered) {
     if (n > 1000) cat('Applying maxdist criterion...')
     from <- from[dist<=maxdist]
@@ -132,7 +132,7 @@ function(point.obj,num.lags,theta,dtheta,maxdist) {
                 (point.obj$y[from]-point.obj$y[to])^2 )
 
 # Apply the maximum distance criteria, if entered...
-  if (maxdist < 0) maxdist <- max(dist,na.rm=T)
+  if (maxdist < 0) maxdist <- max(dist,na.rm=TRUE)
   from <- from[dist<=maxdist]
   to   <- to[dist<=maxdist]
   dist <- dist[dist<=maxdist]
@@ -173,7 +173,7 @@ function(point.obj,num.lags,theta,dtheta,maxdist) {
   }
 
 # create the vector to use to "cut" the bins...
-  bins.cut <- seq(0,max(dist,na.rm=T),max(dist,na.rm=T)/num.lags)
+  bins.cut <- seq(0,max(dist,na.rm=TRUE),max(dist,na.rm=TRUE)/num.lags)
 
 # create the vector of bin center points (for plotting)...
   bins.cent <- NULL
@@ -238,7 +238,7 @@ function(point.obj, pair.obj,num.lags=10,theta=0,dtheta=5,maxdist) {
                 (point.obj$y[from]-point.obj$y[to])^2 )
 
 # Apply the maximum distance criteria, if entered...
-  if (maxdist < 0) maxdist <- max(dist,na.rm=T)
+  if (maxdist < 0) maxdist <- max(dist,na.rm=TRUE)
   from <- from[dist<=maxdist]
   to   <- to[dist<=maxdist]
   dist <- dist[dist<=maxdist]
@@ -279,7 +279,7 @@ function(point.obj, pair.obj,num.lags=10,theta=0,dtheta=5,maxdist) {
   }
 
 # create the vector to use to "cut" the bins...
-  bins.cut <- seq(0,max(dist,na.rm=T),max(dist,na.rm=T)/num.lags)
+  bins.cut <- seq(0,max(dist,na.rm=TRUE),max(dist,na.rm=TRUE)/num.lags)
 
 # create the vector of bin center points (for plotting)...
   bins.cent <- NULL

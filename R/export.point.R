@@ -10,7 +10,7 @@ function(point.obj, filename) {
     for (j in 1:length(names(point.obj))) {
       line <- paste(line,(round(point.obj[[j]],digits=7))[i], collapse=",",sep=",")
     }
-    cat(paste(line,'\n',collapse="",sep=""),file=filename,append=T)
+    cat(paste(line,'\n',collapse="",sep=""),file=filename,append=TRUE)
   }
 
 })

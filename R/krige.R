@@ -1,12 +1,12 @@
 "krige" <-
-function (s, point.obj, at, var.mod.obj, maxdist = NULL, extrap = F, border=NULL) 
+function (s, point.obj, at, var.mod.obj, maxdist = NULL, extrap = FALSE, border=NULL) 
 {
 	    if (!inherits(point.obj, "point")) 
 	    	    stop("point.obj must be of class, \"point\".\n")
 	    # perform kriging on all given points:
 	    if (!inherits(var.mod.obj, "variogram.model")) 
 	    	    stop("var.mod.obj must be of class, \"variogram.model\".\n")
-	    s$do <- c(rep(T, length(s$x)))
+	    s$do <- c(rep(TRUE, length(s$x)))
 	    # do nothing outside the convex hull?
 	    # pull out the attribute vector...
 	    if (!extrap) {

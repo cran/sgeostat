@@ -28,7 +28,7 @@ if(type!='c'&type!='r'&type!='m') stop('type must be "c", "r", or "m".\n')
   y _ y/2
 
 
-  if(missing(ylim)) ylim <- c(0,max(x$classic/2,x$robust/2,na.rm=T))
+  if(missing(ylim)) ylim <- c(0,max(x$classic/2,x$robust/2,na.rm=TRUE))
   plot(x$bins,y,
        ylim=ylim,
        xlim=c(0,max(x$bins)),
@@ -52,12 +52,12 @@ if(type!='c'&type!='r'&type!='m') stop('type must be "c", "r", or "m".\n')
   }
 
 #  plot(x$lag,x$med,
-#       ylim=c(0,max(x$classic,x$robust,x$med,na.rm=T)),
+#       ylim=c(0,max(x$classic,x$robust,x$med,na.rm=TRUE)),
 #       xlab="Lag",ylab="Median estimator",
 #       type="h")
 
 #  plot(x$bins,x$robust,
-#       ylim=c(0,max(x$classic,x$robust,x$med,na.rm=T)),
+#       ylim=c(0,max(x$classic,x$robust,x$med,na.rm=TRUE)),
 #       xlim=c(0,max(x$bins)),
 #       xlab="Lag",ylab="Robust estimator",
 #       type="p")

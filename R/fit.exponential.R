@@ -1,13 +1,13 @@
 assign("fit.exponential",
 function(v.object,c0=NULL,ce=NULL,ae=NULL,type='c',iterations=10,
-         tolerance=.000001,echo=F,plot.it=F,weighted=T){
+         tolerance=.000001,echo=FALSE,plot.it=FALSE,weighted=TRUE){
   # This program fits a univariate exponential model to an empirical variogram
   # estimate.  The SEMI variogram model is the model fit...
 
   if (!inherits(v.object,"variogram")) stop('v.object must be of class, "variogram".\n')
 
-  if (is.null(c0) & is.null(ce) & is.null(ae)) estimate.initial <- T
-  else estimate.initial <- F
+  if (is.null(c0) & is.null(ce) & is.null(ae)) estimate.initial <- TRUE
+  else estimate.initial <- FALSE
 
   if ( !estimate.initial & (is.null(c0) | is.null(ce) | is.null(ae)))
     stop('c0, ce, and ae must all be entered.\n')
@@ -45,12 +45,12 @@ function(v.object,c0=NULL,ce=NULL,ae=NULL,type='c',iterations=10,
   parameters <- c(c0,ce,ae)
   if(iterations>0){
     cat('Initial parameter estimates: ',parameters,'\n')
-    loop <- T
-    converge <- F
+    loop <- TRUE
+    converge <- FALSE
     i <- 1
   } else {
-    loop <- F
-    converge <- F
+    loop <- FALSE
+    converge <- FALSE
   }
 
 # Plot it before we start if requested...
@@ -87,7 +87,7 @@ function(v.object,c0=NULL,ce=NULL,ae=NULL,type='c',iterations=10,
     if(echo) print(cbind(y,xmat,w))
     if(echo) cat('\n\n')    
 
-    fit <- lsfit(xmat,y,wt=w,intercept=F)
+    fit <- lsfit(xmat,y,wt=w,intercept=FALSE)
 
 # calculate the new parameter estimates...
     parameters.old <- parameters
@@ -108,14 +108,14 @@ function(v.object,c0=NULL,ce=NULL,ae=NULL,type='c',iterations=10,
 #    cat('rse.dif = ',rse.dif,'(rse =',rse,')\n\n')
 #    if(rse.dif < tolerance & parm.dist < tolerance) {
     if(abs(rse.dif) < tolerance) {
-      loop <- F
-      converge <- T
+      loop <- FALSE
+      converge <- TRUE
       cat('Convergence achieved by sums of squares.\n')
     }
 
     i <- i+1
     if (i>iterations) {
-      loop <- F
+      loop <- FALSE
     }
     v.m.object <- list(parameters=parameters,
                        model= exponential.v

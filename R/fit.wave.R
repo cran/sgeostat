@@ -1,13 +1,13 @@
 assign("fit.wave",
 function(v.object,c0=NULL,cw=NULL,aw=NULL,type='c',iterations=10,
-         tolerance=.00001,echo=F,plot.it=F,weighted=T){
+         tolerance=.00001,echo=FALSE,plot.it=FALSE,weighted=TRUE){
   # This program fits a univariate periodical model to an empirical variogram
   # estimate.  The SEMI variogram model is the model fit...
 
   if (!inherits(v.object,"variogram")) stop('v.object must be of class, "variogram".\n')
 
-  if (is.null(c0) & is.null(cw) & is.null(aw)) estimate.initial <- T
-  else estimate.initial <- F
+  if (is.null(c0) & is.null(cw) & is.null(aw)) estimate.initial <- TRUE
+  else estimate.initial <- FALSE
 
   if ( !estimate.initial & (is.null(c0) | is.null(cw) | is.null(aw)))
     stop('c0, cw, and aw must all be entered.\n')
@@ -45,11 +45,11 @@ function(v.object,c0=NULL,cw=NULL,aw=NULL,type='c',iterations=10,
   parameters <- c(c0,cw,aw)
   if(iterations>0){
     cat('Initial parameter estimates: ',parameters,'\n')
-    loop <- T
+    loop <- TRUE
     i <- 1
   } else {
-    loop <- F
-    converge <- F
+    loop <- FALSE
+    converge <- FALSE
   }
 # Plot it before we start if requested...
   if (plot.it) {
@@ -85,7 +85,7 @@ function(v.object,c0=NULL,cw=NULL,aw=NULL,type='c',iterations=10,
     if(echo) print(cbind(y,xmat,w))
     if(echo) cat('\n\n')    
 
-    fit <- lsfit(xmat,y,wt=w,intercept=F)
+    fit <- lsfit(xmat,y,wt=w,intercept=FALSE)
 
 # calculate the new parameter estimates...
     parameters.old <- parameters
@@ -106,15 +106,15 @@ function(v.object,c0=NULL,cw=NULL,aw=NULL,type='c',iterations=10,
 #    cat('rse.dif = ',rse.dif,'(rse =',rse,')\n\n')
 #    if(rse.dif < tolerance & parm.dist < tolerance) {
     if(abs(rse.dif) < tolerance) {
-      loop <- F
-      converge <- T
+      loop <- FALSE
+      converge <- TRUE
       cat('Convergence achieved by sums of squares.\n')
     }
 
     i <- i+1
     if (i>iterations) {
-      loop <- F
-      converge <- F
+      loop <- FALSE
+      converge <- FALSE
     }
     v.m.object <- list(parameters=parameters,
                        model= wave.v

@@ -28,7 +28,7 @@ function(point.obj,pair.obj,a1,a2,type='r') {
 # revision 11/4-99 rsb
 #	  names=names,
 	  names.x=names,
-	  varwidth=T)
+	  varwidth=TRUE)
   title(xlab='lag',
 	ylab=ylab)
 
