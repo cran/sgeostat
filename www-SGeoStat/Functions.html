@@ -1,0 +1,152 @@
+<HTML>
+<HEAD>
+<TITLE>Geostatistics for S+: Functions ( 9-Apr-1996)</TITLE>
+<!-- Created by: majure,  2-Nov-1995 -->
+<!-- Changed by: majure,  9-Apr-1996 -->
+
+
+</HEAD> 
+
+<BODY> 
+<H2>Geostatistics for S+: Functions</H2> 
+
+<p>There are currently twelve functions that are defined to carry out
+operations on point, pairs, variogram, and variogram.model
+objects. The functions are listed in the table below in the general
+order in which they are used. For each function, the table lists the
+function name, the class of the primary input object, the class of the
+value of the function (i.e., returned value) and a brief description
+of the operation carried out. Click on a function name in the table to
+see the documentation for that function and examples.
+
+<br><br>
+<table border=1>
+<tr>
+<th>Function<br>Name</th>
+<th>Class of<br>input object</th>
+<th>Class of<br>output object</th>
+<th>Operation</th>
+</tr>
+
+<tr>
+<td><A HREF="Point.html">point</A></td>
+<td>data.frame</td>
+<td><a href="DataStructures.html#point">point</a></td>
+<td>create an object of class point from a data frame</td>
+</tr>
+
+<tr>
+<td><A HREF="Plot.Point.html">plot.point</A></td>
+<td><a href="DataStructures.html#point">point</a></td>
+<td> </td>
+<td>plot the spatial locations, optionally coloring by quantile</td>
+</tr>
+
+<tr>
+<td><A HREF="Identify.Point.html">identify.point</A></td>
+<td><a href="DataStructures.html#point">point</a></td>
+<td> </td>
+<td>interactively query a plot of a point object, displaying attribute values</td>
+</tr>
+
+<tr>
+<td><A HREF="Print.Point.html">print.point</A></td>
+<td><a href="DataStructures.html#point">point</a></td>
+<td> </td>
+<td>print descriptive information about an object of class point</td>
+</tr>
+
+<tr>
+<td><A HREF="Pairs.html">pairs</A></td>
+<td><a href="DataStructures.html#point">point</a></td>
+<td><a href="DataStructures.html#pairs">pairs</a></td>
+<td>create a pairs structure from an object of class point</td>
+</tr>
+
+<tr>
+<td><A HREF="Print.Pairs.html">print.pairs</A></td>
+<td><a href="DataStructures.html#pairs">pairs</a></td>
+<td></td>
+<td>print descriptive information about an object of class pairs</td>
+</tr>
+
+<tr>
+<td><A HREF="Lagplot.html">lagplot</A></td>
+<td><a href="DataStructures.html#point">point</a>, <a href="DataStructures.html#pairs">pairs</a></td>
+<td></td>
+<td>plot a scatter plot of attribute values at one location versus
+attriubte values at another location, optionally allowing for
+interactive query</td>
+</tr>
+
+<tr>
+<td><A HREF="Spacecloud.html">spacecloud</A></td>
+<td><a href="DataStructures.html#point">point</a>, <a href="DataStructures.html#pairs">pairs</a></td>
+<td></td>
+<td>plot a variogram cloud plot, optionally allowing for interactive query</td>
+</tr>
+
+<tr>
+<td><A HREF="Spacebox.html">spacebox</A></td>
+<td><a href="DataStructures.html#point">point</a>, <a href="DataStructures.html#pairs">pairs</a></td>
+<td></td>
+<td>plot a boxplot of the variogram cloud plot</td>
+</tr>
+
+<tr>
+<td><A HREF="Variogram.html">variogram</A></td>
+<td><a href="DataStructures.html#point">point</a>, <a href="DataStructures.html#pairs">pairs</a></td>
+<td><a href="DataStructures.html#variogram">variogram</a></td>
+<td>calculate empirical variogram estimates</td>
+</tr>
+
+<tr>
+<td><A HREF="Plot.Variogram.html">plot.variogram</A></td>
+<td><a href="DataStructures.html#variogram">variogram</a></td>
+<td></td>
+<td>plot empirical variogram estimates, optionally plotting a fitted variogram model</td>
+</tr>
+
+<tr>
+<td><A HREF="Fit.Exponential.html">fit.exponential</A></td>
+<td><a href="DataStructures.html#variogram">variogram</a></td>
+<td><a href="DataStructures.html#variogram.model">variogram.model<a></td>
+<td>fit an exponential variogram model to empirical variogram estimates</td>
+</tr>
+
+<tr>
+<td><A HREF="Krige.html">krige</A></td>
+<td><a href="DataStructures.html#point">point</a>(2), <a href="DataStructures.html#variogram.model">variogram.model<a></td>
+<td><a href="DataStructures.html#point">point<a></td>
+<td>carry out spatial prediction (on points)</td>
+</tr>
+
+</table>
+
+<hr>
+<center>
+<table border=1 cellpadding=5>
+<tr>
+<td><A HREF="homepage.html">S+ GeoStat</A></td>
+<td><A HREF="Introduction.html">Introduction</A></td>
+<td><A HREF="OOPLa.html">OOPLa</A></td>
+<td><A HREF="DataStructures.html">Data Structures</A></td>
+<td><A HREF="Functions.html">Functions</A></td>
+<td><A HREF="Download.html">Download</A></td>
+</tr>
+</table>
+</center>
+
+
+<hr>
+<ADDRESS> <A Name=Signature HREF="http://www.public.iastate.edu/~majure">majure</A></ADDRESS>
+<EM>
+Updated:  9-Apr-1996
+</EM>
+
+</BODY>
+</HTML>
+
+
+
+

@@ -1,0 +1,72 @@
+This is a R port of:
+##############################################################################
+An Object-oriented Framework for Geostatistical Modeling in S+
+
+James J. Majure
+Iowa State University
+Geographic Information Systems
+Support and Research Facility 
+
+email: majure@iastate.edu
+WWW:   http://www.gis.iastate.edu/SGeoStat/homepage.html
+##############################################################################
+
+ported to R:
+
+------------------------------------------------------------------------------
+Albrecht Gebhardt          email: albrecht.gebhardt@uni-klu.ac.at
+Institut fuer Mathematik   Tel. : (++43 463) 2700/837
+Universitaet Klagenfurt    Fax  : (++43 463) 2700/834
+Villacher Str. 161         WWW  : http://www-stat.uni-klu.ac.at/~agebhard
+A-9020 Klagenfurt, Austria
+------------------------------------------------------------------------------
+
+with contributions from 
+
+Roger Bivand <rsb@reclus.nhh.no>
+Department of Geography
+Norwegian School of Economics and Business Administration
+Bergen, Norway
+
+
+Differences to the original distribution:
+
++ I added the functions fit.gaussian() and fit.spherical() similiar to 
+  fit.exponential(). 
+
++ fit.variogram() is a call wrapper for the different variogram fitting 
+  procedures.
+
++ which.na() included for R <-> S compatibility.
+
++ plot.point() changed: legend.pos parameter added.
+
++ The function variogram() (for variogram estimation) has been renamed to
+  est.variogram() to avoid name conflicts (in the html help system) with the 
+  variogram() function from library(spatial) (in Venables/Ripley).
+
++ Because of the lack of a persp() plot function in R, I changed calls to it 
+  (in fit.trend()) to contour().
+
++ I added a dataset "maas" which originally belongs to "gstat", a geostatistics 
+  package from E.J Pebesma (E.J.Pebesma@frw.uva.nl) available at
+
+          http://www.frw.uva.nl/~pebesma/gstat/
+
+  with measurements of zinc as a groundwater quality variable. Details can be 
+  found at the URL above, e.g. a GIF-picture (zn_map.gif) with coordinates (it
+  is also included here). 
+
+  The dataset "maas.bank" contains coordinates of the maas bank, shown in 
+  zn_map.gif. I produced these coordinates by "digitizing" this GIF picture in 
+  a rather simple way: I created a drawing with tgif overlaying the imported 
+  gif, exported this drawing in a postscript file and scaled the resulting 
+  postscript coordinates according to the border of the picture. So the quality
+  is rather poor. The files maas.dig and digi.R are related to this procedure.
+
++ The help pages stem from the original HTML help at
+
+         http://www.gis.iastate.edu/SGeoStat/homepage.html
+
+
+More differences: see ChangeLog file

@@ -1,0 +1,122 @@
+%!
+%%BoundingBox: 73 571 253 750
+%%Title: zn_map
+%%CreationDate: Sat Nov 15 00:29:32 1997
+%%Creator: Tgif-3.0-p13 by William Chia-Wei Cheng (william@cs.UCLA.edu)
+
+/tgifdict 4 dict def
+tgifdict begin
+
+/tgifarrowtipdict 8 dict def
+tgifarrowtipdict /mtrx matrix put
+
+/tgifarrowtip
+ { tgifarrowtipdict begin
+      /dy exch def
+      /dx exch def
+      /h exch def
+      /w exch def
+      /y exch def
+      /x exch def
+      /savematrix mtrx currentmatrix def
+      x y translate
+      dy dx atan rotate
+      0 0 moveto
+      w neg h lineto
+      w neg h neg lineto
+      savematrix setmatrix
+   end
+ } def
+
+end
+
+%%PageBoundingBox: 73 571 253 750
+tgifdict begin
+/tgifsavedpage save def
+
+1 setmiterlimit
+1 setlinewidth
+
+0 setgray
+
+72 0 mul 72 11.00 mul translate
+72 128 div 100.000 mul 100 div dup neg scale
+
+gsave
+
+/tgiforigctm matrix currentmatrix def
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      132 76 moveto
+      448 76 lineto
+      448 388 lineto
+      0 -312 atan dup cos 8.000 mul 136 exch sub
+      exch sin 8.000 mul 388 exch sub lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+gsave
+   tgiforigctm setmatrix
+   newpath
+      136 388 8.000 3.000 -312 0 tgifarrowtip
+   1 setgray closepath fill
+   0 setgray
+   newpath
+      136 388 8.000 3.000 -312 0 tgifarrowtip
+   closepath fill
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      320 96 moveto
+      308 104 lineto
+      300 116 lineto
+      292 132 lineto
+      284 152 lineto
+      276 168 lineto
+      264 184 lineto
+      256 188 lineto
+      240 196 lineto
+      224 200 lineto
+      216 204 lineto
+      208 208 lineto
+      204 216 lineto
+      204 228 lineto
+      200 244 lineto
+      196 252 lineto
+      188 260 lineto
+      180 268 lineto
+      176 272 lineto
+      176 280 lineto
+      168 284 lineto
+      156 296 lineto
+      140 316 lineto
+      132 332 lineto
+      132 348 lineto
+      136 360 lineto
+      144 368 lineto
+      156 376 lineto
+      180 380 lineto
+      204 372 lineto
+      212 364 lineto
+      224 348 lineto
+      232 340 lineto
+      248 332 lineto
+      264 336 lineto
+      276 340 lineto
+      284 348 lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+grestore
+tgifsavedpage restore
+end
+%MatchingCreationDate: Sat Nov 15 00:29:32 1997

@@ -1,0 +1,102 @@
+<HTML>
+<HEAD>
+<TITLE>Geostatitics for S+: Object-oriented Programming in S+ (11-Dec-1995)</TITLE>
+<!-- Created by: majure,  2-Nov-1995 -->
+<!-- Changed by: majure, 11-Dec-1995 -->
+
+
+</HEAD>
+<BODY>
+<H2>Geostatitics for S+: Object-oriented Programming in S+</H2>
+
+The framework for geostatistical modeling being described
+makes extensive use of the object-oriented programming capabilities
+provided in S+. Therefore, a brief description of object-oriented
+programming and its implementation within S+ is necessary.
+
+<h3>Object-oriented Programming</h3>
+
+<p>Object-oriented programming refers to the practice of defining a
+data object which represents something of interest and a set of
+operations that can be carried out on that object.  For example,
+consider the set of real numbers. Each member of this set can be
+considered an object upon which common operations can be conducted,
+such as addition, subtraction, multiplication, etc. In
+object-oriented programming, the structure of a data object is
+typically much more complicated. In the present situation, one of the
+data objects defined represents the (possibly multivariate) data,
+{z(<b><em>s</em></b>1),...,z(<b><em>s</em></b>n)}, containing the
+locations of sampling sites and values observed at those
+sites. Operations defined on this data structure include the
+exploratory and modeling functions introduced above.
+
+<h3>Support for Object-oriented Programming in S+</h3>
+
+<h4>Data Objects</h4>
+
+<p>S+ supports object-oriented programming through the definition of
+complex data objects and the definition of functions that act on those
+objects.  Objects in S+ can be a scalar, a vector, a matrix, a
+list or a data frame. A list is simply a collection of, possibly heterogeneous,
+objects. Thus, it is possible to have a list that consists of a
+vector, a matrix, and another list. A data frame organizes data in
+rows and columns. Each column represents a variable and each row
+represents a case. This allows objects to be created
+that represent very complicated phenomena. For example, the following
+S+ statement creates a list containing a numeric vector and a list:
+<br><br>
+<pre>
+&gt;  list.obj <- list(vect=c(1,2,3), 
++  lst=list(chars=c(`a','b','c'),ints=c(1,2,3))) 
+</pre>
+<br>
+
+[In S+ statements, '&gt;' represents the S+ prompt and '+' represents the
+S+ continuation prompt.]
+
+<h4>Object Classes</h4>
+
+<p>When conducting object-oriented programming, objects are assigned a
+"class" that indicates to functions what type of data the object
+contains. For instance, in this framework the data objects that
+represent spatial locations and associated observed values are
+assigned a class of "point". The class of any S+ object can be
+determined with the <code>class()</code> function.
+
+<h4>Functions</h4>
+
+<p>Operations on objects are implemented as S+ functions, which take
+an object of a particular class and conduct an operation upon it. Many
+simple S+ functions directly support object orientation. For example,
+almost every object will have a related operation that allows the data
+in the object to be visualized or plotted. Therefore, the plot routine
+in S+ looks at its first argument to see whether it has been assigned
+a class. If it has, S+ executes a function named
+<code>plot.class</code> (if this function can be located) instead of
+the default plot function.  In this way, the operation of plotting any
+object is done through the <code>plot</code> function, with which every S+ 
+user is familiar.
+
+<hr>
+<center>
+<table border=1 cellpadding=5>
+<tr>
+<td><A HREF="homepage.html">S+ GeoStat</A></td>
+<td><A HREF="Introduction.html">Introduction</A></td>
+<td><A HREF="OOPLa.html">OOPLa</A></td>
+<td><A HREF="DataStructures.html">Data Structures</A></td>
+<td><A HREF="Functions.html">Functions</A></td>
+<td><A HREF="Download.html">Download</A></td>
+</tr>
+</table>
+</center>
+
+
+<hr>
+<ADDRESS> <A Name=Signature HREF="http://www.public.iastate.edu/~majure">majure</A></ADDRESS>
+<EM>
+Updated: 11-Dec-1995
+</EM>
+
+</BODY>
+</HTML>

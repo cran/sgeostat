@@ -1,0 +1,13 @@
+est.variogram            Variogram Estimator
+fit.variogram            Variogram Model Fit
+identify.point           Identify points on a Point Object
+krige                    Kriging
+lagplot                  Lag Scatter Plot
+pair                     Pair Object
+plot.point               Plot Point Objects
+plot.variogram           Plot Variogram
+point                    Point Object
+print.pair               Pair Object Description
+print.point              Point Object Description
+spacebox                 Boxplot of Variogram Cloud
+spacecloud               Variogram Cloud

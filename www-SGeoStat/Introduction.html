@@ -1,0 +1,77 @@
+<HTML>
+<HEAD>
+<TITLE>Geostatistics for S+: Introduction (11-Dec-1995)</TITLE>
+<!-- Created by: majure,  2-Nov-1995 -->
+<!-- Changed by: majure, 11-Dec-1995 -->
+
+
+</HEAD>
+<BODY>
+<H2>Geostatistics for S+: Introduction</H2>
+
+<p>The modeling tools described in this document are chiefly concerned
+with the prediction, with known confidence, of a spatial stochastic
+process, {<b><em>Z</em></b>(<b><em>s</em></b>): <b><em>s</em></b> (is
+in) <EM>D</EM>}, at an arbitrary location, <b><em>s</em></b>0, from
+data, {z(<b><em>s</em></b>1),...,z(<b><em>s</em></b>n)}. This is done
+by characterizing the spatial dependence of the process from the data
+and using a model of the dependence to construct a predictor that
+minimizes the mean squared prediction error. The spatial dependence is
+characterized through the variogram:
+
+ <P>
+<center><img src="variogram.f.gif"></center>
+<p>The variogram is the variance of the difference of the random
+process at two locations <b><em>s</em></b>i and
+<b><em>s</em></b>j. Under the assumption of intrinsic stationarity,
+this variance is expressed as a function only of the distance (and
+direction) between the two locations. This dependence is typically
+analyzed empirically by looking at pairs of points at which samples
+have been collected. This pairwise analysis of sample points is used
+in exploratory analysis, parametric variogram model fitting, and
+spatial prediction, and forms the basis of the modeling tools in the
+framework.
+
+<p>The framework described in this document consists of exploratory
+spatial data analysis, variogram modeling and spatial prediction
+(kriging). The exploratory techniques include many of those described
+in section 2.2 of Cressie (1993), including lagged scatter plots,
+variogram cloud scatter plots and variogram cloud box plots. Where
+appropriate, interactive querying of these plots is allowed.
+
+<p>The discussion of the framework is illustrated using a data set
+representing precipita tion stations in Iowa. The data set was derived
+from National Oceanic and Atmospheric Administration data sets, and
+contains the location and the total precipitation in the year 1986 for
+159 sites in Iowa and 2 sites in Minnesota. The location information
+is derived from the Station Historical File (TD9767). The
+precipitation amounts are derived from the NOAA Surface/Land Daily
+Cooperative Summary of the Day File (TD3200). The TD3200 file contains
+observations from sites operated by NOAA, as well as cooperative sites
+operated under agreement with NOAA. The total precipitation for each
+site was determined by summing the daily values observed at each site
+during the year 1986. The stations are shown in Figure 22.
+
+<hr>
+<center>
+<table border=1 cellpadding=5>
+<tr>
+<td><A HREF="homepage.html">S+ GeoStat</A></td>
+<td><A HREF="Introduction.html">Introduction</A></td>
+<td><A HREF="OOPLa.html">OOPLa</A></td>
+<td><A HREF="DataStructures.html">Data Structures</A></td>
+<td><A HREF="Functions.html">Functions</A></td>
+<td><A HREF="Download.html">Download</A></td>
+</tr>
+</table>
+</center>
+
+
+<hr>
+<ADDRESS> <A Name=Signature HREF="http://www.public.iastate.edu/~majure">majure</A></ADDRESS>
+<EM>
+Updated: 11-Dec-1995
+</EM>
+
+</BODY>
+</HTML>

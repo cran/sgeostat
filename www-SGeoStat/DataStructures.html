@@ -1,0 +1,226 @@
+<HTML>
+<HEAD>
+<TITLE>Geostatistics for S+: Data Structures (11-Dec-1995)</TITLE>
+<!-- Created by: majure,  2-Nov-1995 -->
+<!-- Changed by: majure, 11-Dec-1995 -->
+
+
+</HEAD>
+<BODY>
+<H2>Geostatistics for S+: Data Structures</H2>
+
+<p>The object-oriented nature of the framework means that it is composed
+of a number of data objects and functions that operate on
+them. Therefore, this section contains a description of the data
+objects that have been defined and the functions that carry out
+operations on those data structures. Four data objects are defined,
+including objects of class point, pairs, variogram, and
+variogram.model. The purpose and structure of each of these types of
+data objects are described below.
+
+<Hr> 
+<a name="point"></a>
+<H3>Point Object Data Structure</H3>
+
+<P>An object of class point represents the observed data of a spatial
+process. This includes the spatial location of sampling sites and the
+values observed at those sites. A point object is stored as a data frame.
+The data frame must contain one column for the X coordinate and one
+column for the Y coordinate of each point, as well as any number of
+columns representing data observed at the points. The structure of a
+point object is shown below:
+
+<code>
+<DL>
+<DT>point.object$
+<table>
+<tr>
+<td>
+<code>
+<DD>x
+<DD>y
+<DD>var1
+<DD>...
+<DD>varm
+</code>
+</td>
+<td>
+<code>
+<DD>vector of x coordinates
+<DD>vector of y coordinates
+<DD>vector of the first variable
+<DD>...
+<DD>vector of the mth variable
+</code>
+</td>
+</tr>
+</table>
+</DL>
+</code>
+
+<p>Point objects are created using the <A
+HREF="Point.html"><code>point</code></A> function. Point objects are
+used togehter with pairs objects to conduct exploratory spatial data
+analysis and to calculate empirical variogram estimates.
+
+<Hr> 
+<a name="pairs"></a>
+<H3>Pairs Object Data Structure</H3>
+
+<P>A pairs object contains information defining pairs of points
+contained in a point object.  A pairs object is a list containing five
+vectors: <code>from, to, lags, dist</code>, and <code>bins</code>. The
+length of each of these vectors (except <code>bins</code>) is equal to
+the number of pairs of points being represented, say <EM>k</EM>. The
+vectors <code>from</code> and <code>to</code> contain pointers into the
+vectors of a point object, pointing to each member of the pair of
+points (e.g., <code>from[k]</code> points to <EM><B>s</B></EM>i and <code>to[k]</code>
+points to <EM><B>s</B></EM>j). The vector <code>dist</code> contains the distance
+between the pairs of points. The vector <code>lags</code> contains the
+lag number to which each pair of points has been assigned. The vector
+<code>bins</code> contains the spatial midpoint between each lag and is
+used for plotting. The structure of a pairs object is shown below:
+
+<code>
+<DL>
+<DT>pairs.object$
+<table>
+<tr>
+<td>
+<code>
+<DD>from
+<DD>to
+<DD>lags
+<DD>dist
+<DD>bins
+</code>
+</td>
+<td>
+<code>
+<DD>vector of indices into the point object for "from" point
+<DD>vector of indices into the point object for "to" point
+<DD>vector of spatial lags of each pair
+<DD>vector of distances between each pair
+<DD>vector of spatial midpoints of each lag (used for plotting)
+</code>
+</td>
+</tr>
+</table>
+</DL>
+</code>
+
+<p>Pairs objects are created using the <A
+HREF="Pairs.html"><code>pairs</code></A> function. 
+
+
+<Hr> 
+<a name="variogram"></a>
+<H3>Variogram Object Data Structure</H3>
+
+<P>An object of class variogram contains empirical variogram estimates
+generated from a point object and a pairs object. A variogram object
+is stored as a data frame containing six columns: <TT>lags</TT>,
+<TT>bins</TT>, <TT>classic</TT>, <TT>robust</TT>, <TT>med</TT>, and
+<TT>n</TT>.  The length of each vector is equal to the num ber of lags
+in the pairs object used to create the variogram object, say <EM>l</EM>. The
+<TT>lags</TT> vector contains the lag numbers for each lag, beginning with one
+(1) and going to the number of lags (<EM>l</EM>).  The <TT>bins</TT> vector contains the
+spatial midpoint of each lag. The <TT>classic</TT>, <TT>robust</TT>, and <TT>med</TT> vectors
+contain the classical, robust, and median variogram estimates for each
+lag, respectively (see Cressie, 1993, p. 75). The <TT>n</TT> vector contains
+the number of pairs of points in each lag. The structure of a
+variogram object is shown below:
+
+<code>
+<DL>
+<DT>variogram.object$
+<table>
+<tr>
+<td>
+<code>
+<DD>lags
+<DD>bins
+<DD>classic
+<DD>robust
+<DD>med
+<DD>n
+</code>
+</td>
+<td>
+<code>
+<DD>vector of lag identifiers
+<DD>vector of midpoints of each lag
+<DD>vector of classic variogram estimates for each lag
+<DD>vector of robust variogram estimates for each lag
+<DD>vector of median variogram estimates for each lag
+<DD>vector of the number of pairs in each lag
+</code>
+</td>
+</tr>
+</table>
+</DL>
+</code>
+
+<p>Variogram objects are created using the <A
+HREF="Variogram.html"><code>variogram</code></A> function. 
+
+<Hr> 
+<a name="variogram.model"></a>
+<H3>Variogram model Object Data Structure</H3>
+
+<P>An object of class variogram.model represents a fitted variogram model generated by 
+fitting a function to a variogram object. A variogram.model object is
+composed of a list consisting of a vector of parameters, <TT>parameters</TT>,
+and a semi-variogram model function, <TT>model</TT>. The structure of a
+variogram.model object is shown below: 
+
+<code>
+<DL>
+<DT>variogram.model.object$
+<table>
+<tr>
+<td>
+<code>
+<DD>parameters
+<DD>model
+</code>
+</td>
+<td>
+<code>
+<DD>vector of fitted model parameters
+<DD>function implementing a valid variogram model
+</code>
+</td>
+</tr>
+</table>
+</DL>
+</code>
+
+<p>Variogram model objects are created using the various model fitting
+routines. Currently several have been created: <A
+HREF="Fit.Exponential.html"><code>fit.exponential</code></A>, <A
+HREF="Fit.Linear.html"><TT>fit.linear</TT></A>.
+
+<hr>
+<center>
+<table border=1 cellpadding=5>
+<tr>
+<td><A HREF="homepage.html">S+ GeoStat</A></td>
+<td><A HREF="Introduction.html">Introduction</A></td>
+<td><A HREF="OOPLa.html">OOPLa</A></td>
+<td><A HREF="DataStructures.html">Data Structures</A></td>
+<td><A HREF="Functions.html">Functions</A></td>
+<td><A HREF="Download.html">Download</A></td>
+</tr>
+</table>
+</center>
+
+
+<Hr> 
+<ADDRESS>
+<A Name=Signature HREF="http://www.public.iastate.edu/~majure">majure</A></ADDRESS>
+<EM>
+Updated: 11-Dec-1995
+</EM>
+
+</BODY> </HTML>

@@ -1,0 +1,55 @@
+<HTML>
+<HEAD>
+<TITLE>Geostatistics for S+: Downloading and Installation (11-Dec-1995)</TITLE>
+<!-- Created by: majure,  3-Nov-1995 -->
+<!-- Changed by: majure, 11-Dec-1995 -->
+
+
+</HEAD>
+<BODY>
+<H2>Geostatistics for S+: Downloading and Installation</H2>
+
+ <P>Click here (<A HREF="SGeoStat.tar.Z">SGeoStat.tar.Z</A>) to
+download the programs. They arrive in the form of a compressed unix
+tar file (tape archive file). On a unix platform, use the following
+commands to uncompress and untar them:
+
+<pre>
+
+% <B>uncompress SGeoStat.tar.Z</B>
+% <B>tar -xvf SGeoStat.tar</B>
+
+</pre>
+
+ <P>This will put several ascii files into the current working
+directory. These files must each be "sourced" into S+. Before sourcing
+the files, however, global change the string:
+<TT>"/home/majure/majure/variograms/.Functions"</TT> to the name of
+the directory in which you want to place the S+ functions. 
+
+ <P>To use the programs in S+, you must "attach" the directory in
+which you put the function, using the <TT>attach()</TT> function.
+
+
+<hr>
+<center>
+<table border=1 cellpadding=5>
+<tr>
+<td><A HREF="homepage.html">S+ GeoStat</A></td>
+<td><A HREF="Introduction.html">Introduction</A></td>
+<td><A HREF="OOPLa.html">OOPLa</A></td>
+<td><A HREF="DataStructures.html">Data Structures</A></td>
+<td><A HREF="Functions.html">Functions</A></td>
+<td><A HREF="Download.html">Download</A></td>
+</tr>
+</table>
+</center>
+
+
+<hr>
+<ADDRESS> <A Name=Signature HREF="http://www.public.iastate.edu/~majure">majure</A></ADDRESS>
+<EM>
+Updated: 11-Dec-1995
+</EM>
+</BODY>
+</HTML>
