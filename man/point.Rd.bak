@@ -1,11 +1,11 @@
 \name{point}
 \title{Point Object}
-\usage{point(dframe, x='x', y='y') }
+\usage{point(data.frame, x='x', y='y') }
 \alias{point}
 \arguments{
-\item{dframe}{a data frame containing the x and y coordinates for each point and the variables observed at each point}
-\item{x}{the name of the column in \code{dframe} that contains the x coordinate}
-\item{y}{the name of the column in \code{dframe} that contains the y coordinate}
+\item{data.frame}{a data frame containing the x and y coordinates for each point and the variables observed at each point}
+\item{x}{the name of the column in data.frame that contains the x coordinate}
+\item{y}{the name of the column in data.frame that contains the y coordinate}
 }
 \value{A point object:
 \item{x}{vector of x coordinates}
@@ -28,4 +28,4 @@ maas.point <- point(maas)
 \references{
 http://www.gis.iastate.edu/SGeoStat/homepage.html
 }
-\keyword{spatial}
+\keyword{sgeostat}

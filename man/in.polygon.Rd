@@ -1,21 +1,23 @@
-\name{in.chull}
-\alias{in.chull}
-\title{ Convex hull test }
+\name{in.polygon}
+\alias{in.polygon}
+\title{ In-Polygon test }
 \description{
-  Checks if points are in the interior of a convex hull.
+  Checks if points are in the interior of a polygon.
 }
 \usage{
-in.chull(x0, y0, x, y)
+in.polygon(x0, y0, x, y)
 }
 \arguments{
   \item{x0}{ coordinates of points to check }
   \item{y0}{ see \code{x0} }
-  \item{x}{ coordinates defining the convex hull }
+  \item{x}{ coordinates defining the polygon }
   \item{y}{  see \code{x}  }
 }
 \details{
-  Uses a simple points-in-polygon check combined with the \code{\link[base]{chull}}
+  Uses a simple points-in-polygon check combined with the \code{\link[base]{polygon}}
   function.
+
+  Polygon is closed automatically.
 }
 \value{
   \item{comp1 }{Description of `comp1'}
@@ -25,10 +27,10 @@ in.chull(x0, y0, x, y)
      (available at http://www.netlib.org/tomspdf/112.pdf) }
 \author{ Albrecht Gebhardt <agebhard@uni-klu.ac.at> }
 
-\seealso{ \code{\link[tripack]{in.convex.hull}}, \code{\link[base]{chull}} }
+\seealso{ \code{\link[tripack]{in.convex.hull}}, \code{\link[base]{polygon}},  \code{\link{in.chull}} }
 
 \examples{
-in.chull(c(0,1),c(0,1),c(0,1,0,-1),c(-1,0,1,0))
+in.polygon(c(0,1),c(0,1),c(0,1,0,-1),c(-1,0,1,0))
 # should give: TRUE FALSE
 }
 \keyword{spatial}%-- one or more ...

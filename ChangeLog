@@ -1,32 +1,30 @@
-2001-01-03  Albrecht Gebhardt  <albrecht.gebhardt@uni-klu.ac.at>
+2001-06-18  Albrecht Gebhardt  <albrecht.gebhardt@uni-klu.ac.at>
 
-	* DESCRIPTION: Maintainer field added
+	* DESCRIPTION, INDEX, data/00Index, man/est.variogram.Rd, man/fit.trend.Rd, man/fit.variogram.Rd, man/identify.point.Rd, man/in.chull.Rd, man/in.polygon.Rd, man/krige.Rd, man/lagplot.Rd, man/maas.Rd, man/maas.bank.Rd, man/pair.Rd, man/plot.point.Rd, man/plot.variogram.Rd, man/point.Rd, man/print.pair.Rd, man/print.point.Rd, man/sgeostat-internal.Rd, man/spacebox.Rd, man/spacecloud.Rd:
+	ready for 1.3
 
-2000-12-30  Albrecht Gebhardt  <albrecht.gebhardt@uni-klu.ac.at>
+2001-03-12  Albrecht Gebhardt  <albrecht.gebhardt@uni-klu.ac.at>
 
-	* man/in.chull.Rd: link to tripack in.convex.hull corrected
+	* R/krige.R: non convex hull border argument added (from rgeostat)
 
-2000-12-16  Albrecht Gebhardt  <albrecht.gebhardt@uni-klu.ac.at>
+2001-03-11  Albrecht Gebhardt  <albrecht.gebhardt@uni-klu.ac.at>
 
-	* man/sgeostat-internal.Rd: last changes for 1.2.0
+	* R/in.polygon.R: in.polygon test added
+
+2001-03-01  Albrecht Gebhardt  <albrecht.gebhardt@uni-klu.ac.at>
+
+	* R/plot.point.R: "add=F" added to plot.point()
 
 2000-12-15  Albrecht Gebhardt  <albrecht.gebhardt@uni-klu.ac.at>
 
-	* INDEX, data/00Index: last changes from build --force
-
-	* man/maas.bank.Rd, man/pair.Rd, man/plot.point.Rd, man/plot.variogram.Rd, man/point.Rd, man/print.pair.Rd, man/print.point.Rd, man/spacebox.Rd, man/spacecloud.Rd, man/est.variogram.Rd, man/fit.trend.Rd, man/fit.variogram.Rd, man/identify.point.Rd, man/krige.Rd, man/lagplot.Rd, man/maas.Rd, R/est.variogram.R:
-	changes for R 1.2.0
-
-2000-05-12  Albrecht Gebhardt  <albrecht.gebhardt@uni-klu.ac.at>
-
-	* R/plot.point.R: double argument removed
+	* R/est.variogram.R: changes for R 1.2.0
 
 2000-04-26  Albrecht Gebhardt  <albrecht.gebhardt@uni-klu.ac.at>
 
-	* src/inplg.f, R/zzz.R, R/in.chull.R, R/krige.R:
+	* src/inplg.f, R/zzz.R, R/in.chull.R:
 	in.chull added, removes dependency from tripack
 
-2000-01-11  alge  <alge@gamma.fuzzy.at>
+2000-01-11  Albrecht Gebhardt  <alge@omega.home.algepop.net>
 
 	* R/fit.wave.R, R/fit.variogram.R, R/fit.spherical.R, R/fit.linear.R, R/fit.gaussian.R, R/fit.exponential.R:
 	options for fit.variogram simplified, iterations=0 for manual fitting allowed

@@ -1,5 +1,5 @@
 "krige" <-
-function (s, point.obj, at, var.mod.obj, maxdist = NULL, extrap = F) 
+function (s, point.obj, at, var.mod.obj, maxdist = NULL, extrap = F, border=NULL) 
 {
 	    if (!inherits(point.obj, "point")) 
 	    	    stop("point.obj must be of class, \"point\".\n")
@@ -10,7 +10,14 @@ function (s, point.obj, at, var.mod.obj, maxdist = NULL, extrap = F)
 	    # do nothing outside the convex hull?
 	    # pull out the attribute vector...
 	    if (!extrap) {
+               if(is.null(border))
 	    	    s$do <- in.chull(s$x,s$y,point.obj$x,point.obj$y) 
+               else
+                  if(is.null(border$x) | is.null(border$y) | 
+                       length(border$x)!=length(border$y))
+                     stop("border argument wrong!")
+                  else
+	    	    s$do <- in.polygon(s$x,s$y,border$x,border$y) 
 	    }
 	    at <- point.obj[[match(at, names(point.obj))]]
 	    # if a maxdist hasn't been entered, then use all of the points...

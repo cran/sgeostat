@@ -26,5 +26,5 @@ http://www.gis.iastate.edu/SGeoStat/homepage.html
 
 \examples{
 }
-\keyword{spatial}%-- one or more ...
-\keyword{spatial}
+\keyword{ sgeostat }%-- one or more ...
+\keyword{sgeostat}

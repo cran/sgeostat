@@ -20,4 +20,4 @@
   The \code{\link{krige}} function interfaces to \code{krige.*}, \code{\link{pair}}
   to \code{pair.*} and \code{\link{fit.trend}} to \code{trend.*}.
 }
-\keyword{spatial}
+\keyword{sgeostat}
