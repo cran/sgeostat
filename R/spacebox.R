@@ -21,7 +21,7 @@ function(point.obj,pair.obj,a1,a2,type='r') {
     diff <- (a1[pair.obj$from]-a2[pair.obj$to])^2
     ylab <- 'squared differnece'
   }
-  names_sort(unique(pair.obj$lags))
+  names<-sort(unique(pair.obj$lags))
   attr(names,'levels') <- NULL
   names <- format(names)
   boxplot(split(diff,pair.obj$lags),

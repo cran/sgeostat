@@ -46,7 +46,7 @@ function(point.obj,pair.obj,a1,a2) {
 
   for (i in c(1:length(tmp))) {
 #  for (i in unique(pair.obj$lags)) {
-    n[i] _ length(bo[[i]][!is.na(bo[[i]])])
+    n[i] <- length(bo[[i]][!is.na(bo[[i]])])
 
 #   classic, see Matheron
     classic[i] <- sum((bo[[i]])^2,na.rm=TRUE) / n[i]

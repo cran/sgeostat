@@ -1,6 +1,11 @@
+2002-05-20  Albrecht Gebhardt  <albrecht.gebhardt@uni-klu.ac.at>
+
+	* R/spacebox.R, R/plot.variogram.R, R/plot.point.R, R/est.variogram.R, DESCRIPTION:
+	_ --> <-
+
 2002-05-05  Debian User  <alge@epsilon.home.algepop.net>
 
-	* data/00Index, INDEX, DESCRIPTION: index updates
+	* data/00Index, INDEX: index updates
 
 2002-05-05  Albrecht Gebhardt  <albrecht.gebhardt@uni-klu.ac.at>
 
@@ -9,7 +14,7 @@
 
 2002-01-04  Albrecht Gebhardt  <albrecht.gebhardt@uni-klu.ac.at>
 
-	* R/est.variogram.R, R/export.point.R, R/fit.exponential.R, R/fit.gaussian.R, R/fit.linear.R, R/fit.spherical.R, R/fit.trend.R, R/fit.wave.R, R/identify.point.R, R/krige.R, R/lagplot.R, R/pair.R, R/plot.point.R, R/plot.variogram.R, R/spacebox.R, man/identify.point.Rd, man/plot.variogram.Rd:
+	* R/export.point.R, R/fit.exponential.R, R/fit.gaussian.R, R/fit.linear.R, R/fit.spherical.R, R/fit.trend.R, R/fit.wave.R, R/identify.point.R, R/krige.R, R/lagplot.R, R/pair.R, man/identify.point.Rd, man/plot.variogram.Rd:
 	final corrections for 1.4.0
 
 2001-12-29  Albrecht Gebhardt  <albrecht.gebhardt@uni-klu.ac.at>

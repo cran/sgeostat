@@ -14,18 +14,18 @@ if (!missing(var.mod.obj))
 if(type!='c'&type!='r'&type!='m') stop('type must be "c", "r", or "m".\n')
 
   if(type=='c'){
-    ylabel _ 'Classical semi-variogram estimator'
-    y _ x$classic
+    ylabel <- 'Classical semi-variogram estimator'
+    y <- x$classic
   }
   if(type=='r'){
-    ylabel _ 'Robust semi-variogram estimator'
-    y _ x$robust
+    ylabel <- 'Robust semi-variogram estimator'
+    y <- x$robust
   }
   if(type=='m'){
-    ylabel _ 'Median semi-varigram estimator'
-    y _ x$med
+    ylabel <- 'Median semi-varigram estimator'
+    y <- x$med
   }
-  y _ y/2
+  y <- y/2
 
 
   if(missing(ylim)) ylim <- c(0,max(x$classic/2,x$robust/2,na.rm=TRUE))

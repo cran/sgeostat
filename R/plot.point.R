@@ -5,17 +5,17 @@ function (x,v,legend.pos=0,axes=TRUE,xlab='',ylab='',add=FALSE,...) {
 # I can't seem to force Splus to use the same scaling on both axes!
 # But we must find a way!
   old.par <- par(pty='s')
-  xdiff _ max(x$x) - min(x$x)
-  ydiff _ max(x$y) - min(x$y)
+  xdiff <- max(x$x) - min(x$x)
+  ydiff <- max(x$y) - min(x$y)
   if (xdiff < ydiff) {
 #   Set up our limits so that there are ydiff units on x and y...
-    ylimits _ c(min(x$y),max(x$y))
-    xlimits _ c((min(x$x) + xdiff/2) - ydiff/2,
+    ylimits <- c(min(x$y),max(x$y))
+    xlimits <- c((min(x$x) + xdiff/2) - ydiff/2,
                 (min(x$x) + xdiff/2) + ydiff/2)
   }
   else {
-    xlimits _ c(min(x$x),max(x$x))
-    ylimits _ c((min(x$y) + ydiff/2) - xdiff/2,
+    xlimits <- c(min(x$x),max(x$x))
+    ylimits <- c((min(x$y) + ydiff/2) - xdiff/2,
                 (min(x$y) + ydiff/2) + xdiff/2)
   }
   if (!missing(v)) {
