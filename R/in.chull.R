@@ -14,6 +14,7 @@
                   as.double(x0),
                   as.double(y0),
                   as.integer(n0),
-                  inhull = integer(n0))
+                  inhull = integer(n0),
+                  PACKAGE="sgeostat")
   as.logical(ret$inhull)
 }

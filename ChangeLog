@@ -1,53 +1,55 @@
-2002-06-28  Albrecht Gebhardt  <alge@psi.home.algepop.net>
+2004-05-25  Albrecht Gebhardt  <albrecht.gebhardt@uni-klu.ac.at>
 
-	* src/inplg.f, DESCRIPTION:
+	* /home/cvsroot/math/stat/R/sgeostat/DESCRIPTION, /home/cvsroot/math/stat/R/sgeostat/INDEX, /home/cvsroot/math/stat/R/sgeostat/R/fit.exponential.R, /home/cvsroot/math/stat/R/sgeostat/R/fit.spherical.R, /home/cvsroot/math/stat/R/sgeostat/R/fit.wave.R, /home/cvsroot/math/stat/R/sgeostat/R/in.chull.R, /home/cvsroot/math/stat/R/sgeostat/R/in.polygon.R, /home/cvsroot/math/stat/R/sgeostat/man/est.variogram.Rd, /home/cvsroot/math/stat/R/sgeostat/man/fit.variogram.Rd, /home/cvsroot/math/stat/R/sgeostat/man/lagplot.Rd, /home/cvsroot/math/stat/R/sgeostat/man/plot.point.Rd, /home/cvsroot/math/stat/R/sgeostat/man/spacebox.Rd, /home/cvsroot/math/stat/R/sgeostat/man/spacecloud.Rd:
+	small fixes for R 1.9
+
+2002-11-03  Claudia Gebhardt  <cgebhard@console1-math>
+
+	* /home/cvsroot/math/stat/R/sgeostat/makefile: simple makefile added
+
+2002-06-28  Debian User  <alge@console1-math>
+
+	* /home/cvsroot/math/stat/R/sgeostat/src/inplg.f:
 	INTEGER type fix from George N. White III <gnw3@acm.org>
 
 2002-05-20  Albrecht Gebhardt  <albrecht.gebhardt@uni-klu.ac.at>
 
-	* R/spacebox.R, R/plot.variogram.R, R/plot.point.R, R/est.variogram.R:
+	* /home/cvsroot/math/stat/R/sgeostat/R/spacebox.R, /home/cvsroot/math/stat/R/sgeostat/R/plot.variogram.R, /home/cvsroot/math/stat/R/sgeostat/R/plot.point.R, /home/cvsroot/math/stat/R/sgeostat/R/est.variogram.R:
 	_ --> <-
 
-2002-05-05  Albrecht Gebhardt  <alge@psi.home.algepop.net>
+2002-05-05  Debian User  <alge@console1-math>
 
-	* data/00Index, INDEX: index updates
+	* /home/cvsroot/math/stat/R/sgeostat/data/00Index: index updates
 
 2002-05-05  Albrecht Gebhardt  <albrecht.gebhardt@uni-klu.ac.at>
 
-	* man/maas.bank.Rd, man/plot.point.Rd, man/maas.Rd, man/krige.Rd, man/fit.variogram.Rd, man/fit.trend.Rd:
+	* /home/cvsroot/math/stat/R/sgeostat/man/maas.bank.Rd, /home/cvsroot/math/stat/R/sgeostat/man/maas.Rd, /home/cvsroot/math/stat/R/sgeostat/man/krige.Rd, /home/cvsroot/math/stat/R/sgeostat/man/fit.trend.Rd:
 	T/F changes in Rd files for R 1.5.0
 
 2002-01-04  Albrecht Gebhardt  <albrecht.gebhardt@uni-klu.ac.at>
 
-	* R/export.point.R, R/fit.exponential.R, R/fit.gaussian.R, R/fit.linear.R, R/fit.spherical.R, R/fit.trend.R, R/fit.wave.R, R/identify.point.R, R/krige.R, R/lagplot.R, R/pair.R, man/identify.point.Rd, man/plot.variogram.Rd:
+	* /home/cvsroot/math/stat/R/sgeostat/R/export.point.R, /home/cvsroot/math/stat/R/sgeostat/R/fit.gaussian.R, /home/cvsroot/math/stat/R/sgeostat/R/fit.linear.R, /home/cvsroot/math/stat/R/sgeostat/R/fit.trend.R, /home/cvsroot/math/stat/R/sgeostat/R/identify.point.R, /home/cvsroot/math/stat/R/sgeostat/R/krige.R, /home/cvsroot/math/stat/R/sgeostat/R/lagplot.R, /home/cvsroot/math/stat/R/sgeostat/R/pair.R, /home/cvsroot/math/stat/R/sgeostat/man/identify.point.Rd, /home/cvsroot/math/stat/R/sgeostat/man/plot.variogram.Rd:
 	final corrections for 1.4.0
 
 2001-12-29  Albrecht Gebhardt  <albrecht.gebhardt@uni-klu.ac.at>
 
-	* R/print.pair.R, R/print.point.R, man/print.pair.Rd, man/print.point.Rd, man/spacebox.Rd, man/spacecloud.Rd:
+	* /home/cvsroot/math/stat/R/sgeostat/R/print.pair.R, /home/cvsroot/math/stat/R/sgeostat/R/print.point.R, /home/cvsroot/math/stat/R/sgeostat/man/print.pair.Rd, /home/cvsroot/math/stat/R/sgeostat/man/print.point.Rd:
 	changes for R 1.4.0, mostly documentation, some "..." issues and generic
 	method problems
 
 2001-12-19  Albrecht Gebhardt  <albrecht.gebhardt@uni-klu.ac.at>
 
-	* R/identify.points.R: more 1.4.0 incompatibilities
+	* /home/cvsroot/math/stat/R/sgeostat/R/identify.points.R:
+	more 1.4.0 incompatibilities
 
 2001-08-09  Albrecht Gebhardt  <albrecht.gebhardt@uni-klu.ac.at>
 
-	* man/sgeostat-internal.Rd, R/fit.variogram.R, R/zzz.R, man/est.variogram.Rd, man/in.chull.Rd, man/in.polygon.Rd, man/lagplot.Rd, man/pair.Rd, man/point.Rd:
+	* /home/cvsroot/math/stat/R/sgeostat/man/sgeostat-internal.Rd, /home/cvsroot/math/stat/R/sgeostat/R/fit.variogram.R, /home/cvsroot/math/stat/R/sgeostat/R/zzz.R, /home/cvsroot/math/stat/R/sgeostat/man/in.chull.Rd, /home/cvsroot/math/stat/R/sgeostat/man/in.polygon.Rd, /home/cvsroot/math/stat/R/sgeostat/man/pair.Rd, /home/cvsroot/math/stat/R/sgeostat/man/point.Rd:
 	cvsroot recovery. finished.
-
-2001-03-11  Albrecht Gebhardt  <albrecht.gebhardt@uni-klu.ac.at>
-
-	* R/in.polygon.R: in.polygon test added
-
-2000-04-26  Albrecht Gebhardt  <albrecht.gebhardt@uni-klu.ac.at>
-
-	* R/in.chull.R: in.chull added, removes dependency from tripack
 
 1999-04-20  Albrecht Gebhardt  <albrecht.gebhardt@uni-klu.ac.at>
 
-	* man/print.pairs.Rd, man/pairs.Rd, R/spacecloud.R, R/print.pairs.R, R/pairs.R, README:
+	* /home/cvsroot/math/stat/R/sgeostat/man/print.pairs.Rd, /home/cvsroot/math/stat/R/sgeostat/man/pairs.Rd, /home/cvsroot/math/stat/R/sgeostat/R/spacecloud.R, /home/cvsroot/math/stat/R/sgeostat/R/print.pairs.R, /home/cvsroot/math/stat/R/sgeostat/R/pairs.R, /home/cvsroot/math/stat/R/sgeostat/README:
 	Adopted for R 0.64.x, example() sections should now work.
 	Thanks to Roger Bivand <rsb@reclus.nhh.no> for providing solutions
 	to some of my errors.
@@ -56,35 +58,37 @@
 
 1998-09-08  Albrecht Gebhardt  <albrecht.gebhardt@uni-klu.ac.at>
 
-	* R/krige.all.R, R/krige.maxdist.R: split into several files
+	* /home/cvsroot/math/stat/R/sgeostat/R/krige.all.R, /home/cvsroot/math/stat/R/sgeostat/R/krige.maxdist.R:
+	split into several files
 
 1998-07-16  Albrecht Gebhardt  <albrecht.gebhardt@uni-klu.ac.at>
 
-	* R/which.na.R: needed for R <-> S compatibility
+	* /home/cvsroot/math/stat/R/sgeostat/R/which.na.R:
+	needed for R <-> S compatibility
 
-	* Changes: cleanup some files
+	* /home/cvsroot/math/stat/R/sgeostat/Changes: cleanup some files
 
 1998-05-14  Albrecht Gebhardt  <albrecht.gebhardt@uni-klu.ac.at>
 
-	* www-SGeoStat/DataStructures.html, www-SGeoStat/Download.html, www-SGeoStat/Fit.Exponential.html, www-SGeoStat/Functions.html, www-SGeoStat/Identify.Point.html, www-SGeoStat/Krige.html, www-SGeoStat/Lagplot.html, www-SGeoStat/Pairs.html, www-SGeoStat/Plot.Point.html, www-SGeoStat/Plot.Variogram.html, www-SGeoStat/Point.html, www-SGeoStat/Print.Pairs.html, www-SGeoStat/Print.Point.html, www-SGeoStat/Spacebox.html, www-SGeoStat/Spacecloud.html, www-SGeoStat/Variogram.html, www-SGeoStat/exponential.gif, www-SGeoStat/lagplot.gif, www-SGeoStat/lagplot.query.gif, www-SGeoStat/spacebox.gif, www-SGeoStat/spacecloud.gif, www-SGeoStat/stations.gif, www-SGeoStat/stations.inches.gif, www-SGeoStat/theta.gif, www-SGeoStat/variogram.f.gif, www-SGeoStat/weight.gif:
+	* /home/cvsroot/math/stat/R/sgeostat/www-SGeoStat/DataStructures.html, /home/cvsroot/math/stat/R/sgeostat/www-SGeoStat/Download.html, /home/cvsroot/math/stat/R/sgeostat/www-SGeoStat/Fit.Exponential.html, /home/cvsroot/math/stat/R/sgeostat/www-SGeoStat/Functions.html, /home/cvsroot/math/stat/R/sgeostat/www-SGeoStat/Identify.Point.html, /home/cvsroot/math/stat/R/sgeostat/www-SGeoStat/Krige.html, /home/cvsroot/math/stat/R/sgeostat/www-SGeoStat/Lagplot.html, /home/cvsroot/math/stat/R/sgeostat/www-SGeoStat/Pairs.html, /home/cvsroot/math/stat/R/sgeostat/www-SGeoStat/Plot.Point.html, /home/cvsroot/math/stat/R/sgeostat/www-SGeoStat/Plot.Variogram.html, /home/cvsroot/math/stat/R/sgeostat/www-SGeoStat/Point.html, /home/cvsroot/math/stat/R/sgeostat/www-SGeoStat/Print.Pairs.html, /home/cvsroot/math/stat/R/sgeostat/www-SGeoStat/Print.Point.html, /home/cvsroot/math/stat/R/sgeostat/www-SGeoStat/Spacebox.html, /home/cvsroot/math/stat/R/sgeostat/www-SGeoStat/Spacecloud.html, /home/cvsroot/math/stat/R/sgeostat/www-SGeoStat/Variogram.html, /home/cvsroot/math/stat/R/sgeostat/www-SGeoStat/exponential.gif, /home/cvsroot/math/stat/R/sgeostat/www-SGeoStat/lagplot.gif, /home/cvsroot/math/stat/R/sgeostat/www-SGeoStat/lagplot.query.gif, /home/cvsroot/math/stat/R/sgeostat/www-SGeoStat/spacebox.gif, /home/cvsroot/math/stat/R/sgeostat/www-SGeoStat/spacecloud.gif, /home/cvsroot/math/stat/R/sgeostat/www-SGeoStat/stations.gif, /home/cvsroot/math/stat/R/sgeostat/www-SGeoStat/stations.inches.gif, /home/cvsroot/math/stat/R/sgeostat/www-SGeoStat/theta.gif, /home/cvsroot/math/stat/R/sgeostat/www-SGeoStat/variogram.f.gif, /home/cvsroot/math/stat/R/sgeostat/www-SGeoStat/weight.gif:
 	Imported Sources
 
-	* www-SGeoStat/DataStructures.html, www-SGeoStat/Download.html, www-SGeoStat/Fit.Exponential.html, www-SGeoStat/Functions.html, www-SGeoStat/Identify.Point.html, www-SGeoStat/Krige.html, www-SGeoStat/Lagplot.html, www-SGeoStat/Pairs.html, www-SGeoStat/Plot.Point.html, www-SGeoStat/Plot.Variogram.html, www-SGeoStat/Point.html, www-SGeoStat/Print.Pairs.html, www-SGeoStat/Print.Point.html, www-SGeoStat/Spacebox.html, www-SGeoStat/Spacecloud.html, www-SGeoStat/Variogram.html, www-SGeoStat/exponential.gif, www-SGeoStat/lagplot.gif, www-SGeoStat/lagplot.query.gif, www-SGeoStat/spacebox.gif, www-SGeoStat/spacecloud.gif, www-SGeoStat/stations.gif, www-SGeoStat/stations.inches.gif, www-SGeoStat/theta.gif, www-SGeoStat/variogram.f.gif, www-SGeoStat/weight.gif:
+	* /home/cvsroot/math/stat/R/sgeostat/www-SGeoStat/DataStructures.html, /home/cvsroot/math/stat/R/sgeostat/www-SGeoStat/Download.html, /home/cvsroot/math/stat/R/sgeostat/www-SGeoStat/Fit.Exponential.html, /home/cvsroot/math/stat/R/sgeostat/www-SGeoStat/Functions.html, /home/cvsroot/math/stat/R/sgeostat/www-SGeoStat/Identify.Point.html, /home/cvsroot/math/stat/R/sgeostat/www-SGeoStat/Krige.html, /home/cvsroot/math/stat/R/sgeostat/www-SGeoStat/Lagplot.html, /home/cvsroot/math/stat/R/sgeostat/www-SGeoStat/Pairs.html, /home/cvsroot/math/stat/R/sgeostat/www-SGeoStat/Plot.Point.html, /home/cvsroot/math/stat/R/sgeostat/www-SGeoStat/Plot.Variogram.html, /home/cvsroot/math/stat/R/sgeostat/www-SGeoStat/Point.html, /home/cvsroot/math/stat/R/sgeostat/www-SGeoStat/Print.Pairs.html, /home/cvsroot/math/stat/R/sgeostat/www-SGeoStat/Print.Point.html, /home/cvsroot/math/stat/R/sgeostat/www-SGeoStat/Spacebox.html, /home/cvsroot/math/stat/R/sgeostat/www-SGeoStat/Spacecloud.html, /home/cvsroot/math/stat/R/sgeostat/www-SGeoStat/Variogram.html, /home/cvsroot/math/stat/R/sgeostat/www-SGeoStat/exponential.gif, /home/cvsroot/math/stat/R/sgeostat/www-SGeoStat/lagplot.gif, /home/cvsroot/math/stat/R/sgeostat/www-SGeoStat/lagplot.query.gif, /home/cvsroot/math/stat/R/sgeostat/www-SGeoStat/spacebox.gif, /home/cvsroot/math/stat/R/sgeostat/www-SGeoStat/spacecloud.gif, /home/cvsroot/math/stat/R/sgeostat/www-SGeoStat/stations.gif, /home/cvsroot/math/stat/R/sgeostat/www-SGeoStat/stations.inches.gif, /home/cvsroot/math/stat/R/sgeostat/www-SGeoStat/theta.gif, /home/cvsroot/math/stat/R/sgeostat/www-SGeoStat/variogram.f.gif, /home/cvsroot/math/stat/R/sgeostat/www-SGeoStat/weight.gif:
 	New file.
 
-	* R/point.R, www-SGeoStat/Introduction.html, www-SGeoStat/OOPLa.html, www-SGeoStat/homepage.html, www-SGeoStat/variogram.gif:
+	* /home/cvsroot/math/stat/R/sgeostat/R/point.R, /home/cvsroot/math/stat/R/sgeostat/www-SGeoStat/Introduction.html, /home/cvsroot/math/stat/R/sgeostat/www-SGeoStat/OOPLa.html, /home/cvsroot/math/stat/R/sgeostat/www-SGeoStat/homepage.html, /home/cvsroot/math/stat/R/sgeostat/www-SGeoStat/variogram.gif:
 	Imported Sources
 
-	* R/point.R, www-SGeoStat/Introduction.html, www-SGeoStat/OOPLa.html, www-SGeoStat/homepage.html, www-SGeoStat/variogram.gif:
+	* /home/cvsroot/math/stat/R/sgeostat/R/point.R, /home/cvsroot/math/stat/R/sgeostat/www-SGeoStat/Introduction.html, /home/cvsroot/math/stat/R/sgeostat/www-SGeoStat/OOPLa.html, /home/cvsroot/math/stat/R/sgeostat/www-SGeoStat/homepage.html, /home/cvsroot/math/stat/R/sgeostat/www-SGeoStat/variogram.gif:
 	New file.
 
-	* COPYING, data/maas.R, data/maas.bank.R, digi.R, maas.dig, zn_map.eps, zn_map.gif, zn_map.ps:
+	* /home/cvsroot/math/stat/R/sgeostat/COPYING, /home/cvsroot/math/stat/R/sgeostat/data/maas.R, /home/cvsroot/math/stat/R/sgeostat/data/maas.bank.R, /home/cvsroot/math/stat/R/sgeostat/digi.R, /home/cvsroot/math/stat/R/sgeostat/maas.dig, /home/cvsroot/math/stat/R/sgeostat/zn_map.eps, /home/cvsroot/math/stat/R/sgeostat/zn_map.gif, /home/cvsroot/math/stat/R/sgeostat/zn_map.ps:
 	Imported Sources
 
-	* COPYING, data/maas.R, data/maas.bank.R, digi.R, maas.dig, zn_map.eps, zn_map.gif, zn_map.ps:
+	* /home/cvsroot/math/stat/R/sgeostat/COPYING, /home/cvsroot/math/stat/R/sgeostat/data/maas.R, /home/cvsroot/math/stat/R/sgeostat/data/maas.bank.R, /home/cvsroot/math/stat/R/sgeostat/digi.R, /home/cvsroot/math/stat/R/sgeostat/maas.dig, /home/cvsroot/math/stat/R/sgeostat/zn_map.eps, /home/cvsroot/math/stat/R/sgeostat/zn_map.gif, /home/cvsroot/math/stat/R/sgeostat/zn_map.ps:
 	New file.
 
-	* TITLE: Imported Sources
+	* /home/cvsroot/math/stat/R/sgeostat/TITLE: Imported Sources
 
-	* TITLE: New file.
+	* /home/cvsroot/math/stat/R/sgeostat/TITLE: New file.
 

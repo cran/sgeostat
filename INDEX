@@ -1,9 +1,10 @@
+calcangle               Internal sgeostat functions
 est.variogram           Variogram Estimator
-fit.trend               Fit polynomial trend functions 
+fit.trend               Fit polynomial trend functions
 fit.variogram           Variogram Model Fit
 identify.point          Identify points on a Point Object
-in.chull                Convex hull test 
-in.polygon              In-Polygon test 
+in.chull                Convex hull test
+in.polygon              In-Polygon test
 krige                   Kriging
 lagplot                 Lag Scatter Plot
 maas                    maas- zinc measurements
@@ -14,6 +15,5 @@ plot.variogram          Plot Variogram
 point                   Point Object
 print.pair              Pairs Object Description
 print.point             Point Object Description
-sgeostat-internal       Internal sgeostat functions
 spacebox                Boxplot of Variogram Cloud
 spacecloud              Variogram Cloud

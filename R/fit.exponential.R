@@ -1,6 +1,6 @@
 assign("fit.exponential",
-function(v.object,c0=NULL,ce=NULL,ae=NULL,type='c',iterations=10,
-         tolerance=.000001,echo=FALSE,plot.it=FALSE,weighted=TRUE){
+function(v.object,c0=0,ce=1000,ae=1000,type='c',iterations=10,
+         tolerance=1.0e-6,echo=FALSE,plot.it=FALSE,weighted=TRUE){
   # This program fits a univariate exponential model to an empirical variogram
   # estimate.  The SEMI variogram model is the model fit...
 

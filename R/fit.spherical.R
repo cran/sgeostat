@@ -1,7 +1,7 @@
 "fit.spherical" <-
-function (v.object, c0 = NULL, cs = NULL, as = NULL, type = "c", 
+function (v.object, c0 = 0, cs = 1000, as = 1000, type = "c", 
         iterations = 10, tolerance = 1e-06, echo = FALSE, plot.it = FALSE, 
-        weighted = TRUE, delta = 0.1) 
+        weighted = TRUE, delta = 0.1, verbose=TRUE) 
 {
         # This program fits a univariate spherical model to an empirical variogram
         # estimate.  The SEMI variogram model is the model fit...
@@ -72,7 +72,8 @@ function (v.object, c0 = NULL, cs = NULL, as = NULL, type = "c",
                 plot(v.object, var.mod.obj=v.m.object, type = type)
         }
         while (loop) {
-                cat("Iteration:", i, "\n")
+                if(verbose)
+                  cat("Iteration:", i, "\n")
                 # establish the Y vector...
                 y <- (empgamma - spherical.v(h, parameters))
                 # establish the x matrix...
@@ -98,17 +99,20 @@ function (v.object, c0 = NULL, cs = NULL, as = NULL, type = "c",
                 parameters <- fit$coef + parameters
                 parameters <- ifelse(parameters > 0, parameters, 
                         1e-06)
-                cat("Gradient vector: ", fit$coef, "\n")
-                cat("New parameter estimates: ", parameters, 
-                        "\n\n")
+                if(verbose){
+                  cat("Gradient vector: ", fit$coef, "\n")
+                  cat("New parameter estimates: ", parameters, 
+                      "\n\n")
+                }
                 # Check for convergence, see if the sum of squares has converged
                 rse.old <- rse
                 rse <- sum(fit$residuals^2)
                 rse.dif <- rse - rse.old
                 # Check for convergence of parmeters...
                 parm.dist <- sqrt(sum((parameters - parameters.old)^2))
-                cat("rse.dif = ", rse.dif, "(rse =", rse, ")  ;  parm.dist = ", 
-                        parm.dist, "\n\n")
+                if(verbose)
+                  cat("rse.dif = ", rse.dif, "(rse =", rse, ")  ;  parm.dist = ", 
+                      parm.dist, "\n\n")
                 #    cat('rse.dif = ',rse.dif,'(rse =',rse,')\n\n')
                 #    if(rse.dif < tolerance & parm.dist < tolerance) {
                 if (abs(rse.dif) < tolerance) {
@@ -133,9 +137,9 @@ function (v.object, c0 = NULL, cs = NULL, as = NULL, type = "c",
                         "\n\n")
         else cat("Convergence not achieved!\n")
 
-        names(parameters)<-c("nugget","sill","range")
 
         v.m.object <- list(parameters = parameters1, model = spherical.v)
+        names(v.m.object$parameters)<-c("nugget","sill","range")
         attr(v.m.object, "class") <- "variogram.model"
         attr(v.m.object, "type") <- "spherical"
         return(v.m.object)

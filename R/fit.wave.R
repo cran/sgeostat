@@ -1,6 +1,6 @@
 assign("fit.wave",
-function(v.object,c0=NULL,cw=NULL,aw=NULL,type='c',iterations=10,
-         tolerance=.00001,echo=FALSE,plot.it=FALSE,weighted=TRUE){
+function(v.object,c0=0,cw=1000,aw=1000,type='c',iterations=10,
+         tolerance=1.0e-6,echo=FALSE,plot.it=FALSE,weighted=TRUE){
   # This program fits a univariate periodical model to an empirical variogram
   # estimate.  The SEMI variogram model is the model fit...
 

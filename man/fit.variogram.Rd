@@ -8,7 +8,8 @@ fit.exponential(v.object, c0, ce, ae, type='c',
 fit.gaussian(v.object, c0, cg, ag, type='c', 
              iterations=10, tolerance=1e-06, echo=FALSE,  plot.it=FALSE, weighted=TRUE)
 fit.spherical(v.object, c0, cs, as, type='c', iterations=10,
-             tolerance=1e-06, echo=FALSE,  plot.it=FALSE, weighted=TRUE, delta=0.1)
+             tolerance=1e-06, echo=FALSE,  plot.it=FALSE, weighted=TRUE,
+             delta=0.1, verbose=TRUE)
 fit.wave(v.object, c0, cw, aw, type='c', 
          iterations=10, tolerance=1e-06, echo=FALSE,  plot.it=FALSE, weighted=TRUE)
 fit.linear(v.object, type='c', plot.it=FALSE,iterations=1, c0=0, cl=1)}
@@ -40,6 +41,7 @@ to be fit.}
 \item{tolerance}{the tolerance used to determine if model convergence has been achieved.}
 \item{delta}{initial stepsize (relative) for pseudo Newton approximation, applies only to \code{fit.spherical}}
 \item{echo}{if TRUE, be verbose.}
+\item{verbose}{if TRUE, be verbose (show iteration for spherical model fit).}
 \item{plot.it}{if TRUE, the variogram estimate will be plotted each iteration.}
 \item{weighted}{if TRUE, the fit will be done using weighted least squares,
   where the weightes are given in Cressie (1991, p. 99)}
