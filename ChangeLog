@@ -1,8 +1,20 @@
+2001-01-03  Albrecht Gebhardt  <albrecht.gebhardt@uni-klu.ac.at>
+
+	* DESCRIPTION: Maintainer field added
+
+2000-12-30  Albrecht Gebhardt  <albrecht.gebhardt@uni-klu.ac.at>
+
+	* man/in.chull.Rd: link to tripack in.convex.hull corrected
+
+2000-12-16  Albrecht Gebhardt  <albrecht.gebhardt@uni-klu.ac.at>
+
+	* man/sgeostat-internal.Rd: last changes for 1.2.0
+
 2000-12-15  Albrecht Gebhardt  <albrecht.gebhardt@uni-klu.ac.at>
 
 	* INDEX, data/00Index: last changes from build --force
 
-	* man/maas.bank.Rd, man/pair.Rd, man/plot.point.Rd, man/plot.variogram.Rd, man/point.Rd, man/print.pair.Rd, man/print.point.Rd, man/sgeostat-internal.Rd, man/spacebox.Rd, man/spacecloud.Rd, man/est.variogram.Rd, man/fit.trend.Rd, man/fit.variogram.Rd, man/identify.point.Rd, man/in.chull.Rd, man/krige.Rd, man/lagplot.Rd, man/maas.Rd, DESCRIPTION, R/est.variogram.R:
+	* man/maas.bank.Rd, man/pair.Rd, man/plot.point.Rd, man/plot.variogram.Rd, man/point.Rd, man/print.pair.Rd, man/print.point.Rd, man/spacebox.Rd, man/spacecloud.Rd, man/est.variogram.Rd, man/fit.trend.Rd, man/fit.variogram.Rd, man/identify.point.Rd, man/krige.Rd, man/lagplot.Rd, man/maas.Rd, R/est.variogram.R:
 	changes for R 1.2.0
 
 2000-05-12  Albrecht Gebhardt  <albrecht.gebhardt@uni-klu.ac.at>
@@ -14,7 +26,7 @@
 	* src/inplg.f, R/zzz.R, R/in.chull.R, R/krige.R:
 	in.chull added, removes dependency from tripack
 
-2000-01-11  Albrecht Gebhardt  <alge@epsilon.fuzzy.at>
+2000-01-11  alge  <alge@gamma.fuzzy.at>
 
 	* R/fit.wave.R, R/fit.variogram.R, R/fit.spherical.R, R/fit.linear.R, R/fit.gaussian.R, R/fit.exponential.R:
 	options for fit.variogram simplified, iterations=0 for manual fitting allowed

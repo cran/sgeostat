@@ -25,7 +25,7 @@ in.chull(x0, y0, x, y)
      (available at http://www.netlib.org/tomspdf/112.pdf) }
 \author{ Albrecht Gebhardt <agebhard@uni-klu.ac.at> }
 
-\seealso{ \code{\link{in.convex.hull}}, \code{\link{chull}} }
+\seealso{ \code{\link[tripack]{in.convex.hull}}, \code{\link{chull}} }
 
 \examples{
 in.chull(c(0,1),c(0,1),c(0,1,0,-1),c(-1,0,1,0))

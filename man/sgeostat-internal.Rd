@@ -14,12 +14,10 @@
 \description{
  Internal sgeostat functions
 }
-\usage{
-The \code{\link{krige()}} function interfaces to \code{krige.*}, \code{\link{pair}}
-to \code{pair.*} and \code{\link{fit.trend}} to \code{trend.*}.
-}
 \details{
-  These are not to be called by the user.
+  These functions are not intended to be called by the user.
+ 
+  The \code{\link{krige()}} function interfaces to \code{krige.*}, \code{\link{pair}}
+  to \code{pair.*} and \code{\link{fit.trend}} to \code{trend.*}.
 }
-\keyword{sgeostat}
 \keyword{sgeostat}
