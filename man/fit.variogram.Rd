@@ -4,14 +4,14 @@
 fit.variogram(model="exponential", v.object, nugget, sill,
               range, slope, ...)
 fit.exponential(v.object, c0, ce, ae, type='c', 
-                iterations=10, tolerance=1e-06, echo=F, plot.it=F, weighted=T)
+                iterations=10, tolerance=1e-06, echo=FALSE, plot.it=FALSE, weighted=TRUE)
 fit.gaussian(v.object, c0, cg, ag, type='c', 
-             iterations=10, tolerance=1e-06, echo=F,  plot.it=F, weighted=T)
+             iterations=10, tolerance=1e-06, echo=FALSE,  plot.it=FALSE, weighted=TRUE)
 fit.spherical(v.object, c0, cs, as, type='c', iterations=10,
-             tolerance=1e-06, echo=F,  plot.it=F, weighted=T, delta=0.1)
+             tolerance=1e-06, echo=FALSE,  plot.it=FALSE, weighted=TRUE, delta=0.1)
 fit.wave(v.object, c0, cw, aw, type='c', 
-         iterations=10, tolerance=1e-06, echo=F,  plot.it=F, weighted=T)
-fit.linear(v.object, type='c', plot.it=F,iterations=1, c0=0, cl=1)}
+         iterations=10, tolerance=1e-06, echo=FALSE,  plot.it=FALSE, weighted=TRUE)
+fit.linear(v.object, type='c', plot.it=FALSE,iterations=1, c0=0, cl=1)}
 \alias{fit.variogram}
 \alias{fit.exponential}
 \alias{fit.wave}
@@ -39,9 +39,9 @@ to be fit.}
 \item{iterations}{the number of iterations of the fitting procedure to execute.}
 \item{tolerance}{the tolerance used to determine if model convergence has been achieved.}
 \item{delta}{initial stepsize (relative) for pseudo Newton approximation, applies only to \code{fit.spherical}}
-\item{echo}{if T, be verbose.}
-\item{plot.it}{if T, the variogram estimate will be plotted each iteration.}
-\item{weighted}{if T, the fit will be done using weighted least squares,
+\item{echo}{if TRUE, be verbose.}
+\item{plot.it}{if TRUE, the variogram estimate will be plotted each iteration.}
+\item{weighted}{if TRUE, the fit will be done using weighted least squares,
   where the weightes are given in Cressie (1991, p. 99)}
 \item{...}{only \code{fit.variogram}: additional parameters to hand
   through to specific model fit functions}
@@ -63,7 +63,7 @@ function, \code{model}.
   exponential or gaussian variogram model to empirical variogram estimates.
 \code{fit.spherical} uses the same algorithm but with differential
   quotients in place of first derivatives. When \code{weighted} is
-  \code{T}, the regression is weighted by \eqn{n(h)/gamma(h)^2} where
+  \code{TRUE}, the regression is weighted by \eqn{n(h)/gamma(h)^2} where
   the numerator is the number of pairs of points in a given lag.
 
   Setting \code{iterations} to 0 means no fit procedure is applied. Thus
@@ -79,12 +79,12 @@ if(length(ls(pat="maas.v"))==0){example(est.variogram)}
 #
 # automatic fit:
 #
-maas.vmod<-fit.gaussian(maas.v,c0=60000,cg=110000,ag=800,plot.it=T,
+maas.vmod<-fit.gaussian(maas.v,c0=60000,cg=110000,ag=800,plot.it=TRUE,
 iterations=30)
 #
 # iterations=0, means no fit, intended for "subjective" fit
 #
-maas.vmod.fixed<-fit.variogram("gaussian",maas.v,nugget=60000,sill=110000,range=800,plot.it=T,iterations=0)
+maas.vmod.fixed<-fit.variogram("gaussian",maas.v,nugget=60000,sill=110000,range=800,plot.it=TRUE,iterations=0)
 }
 \references{
 http://www.gis.iastate.edu/SGeoStat/homepage.html

@@ -6,7 +6,7 @@
   Similar to functions in B. Ripleys spatial library.
 }
 \usage{
-fit.trend(point.obj, at, np=2, plot.it=T)
+fit.trend(point.obj, at, np=2, plot.it=TRUE)
 }
 \arguments{
   \item{point.obj}{ \code{\link{point}} object }
