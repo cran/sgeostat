@@ -1,9 +1,14 @@
+2002-06-28  Albrecht Gebhardt  <alge@psi.home.algepop.net>
+
+	* src/inplg.f, DESCRIPTION:
+	INTEGER type fix from George N. White III <gnw3@acm.org>
+
 2002-05-20  Albrecht Gebhardt  <albrecht.gebhardt@uni-klu.ac.at>
 
-	* R/spacebox.R, R/plot.variogram.R, R/plot.point.R, R/est.variogram.R, DESCRIPTION:
+	* R/spacebox.R, R/plot.variogram.R, R/plot.point.R, R/est.variogram.R:
 	_ --> <-
 
-2002-05-05  Debian User  <alge@epsilon.home.algepop.net>
+2002-05-05  Albrecht Gebhardt  <alge@psi.home.algepop.net>
 
 	* data/00Index, INDEX: index updates
 
@@ -38,8 +43,7 @@
 
 2000-04-26  Albrecht Gebhardt  <albrecht.gebhardt@uni-klu.ac.at>
 
-	* src/inplg.f, R/in.chull.R:
-	in.chull added, removes dependency from tripack
+	* R/in.chull.R: in.chull added, removes dependency from tripack
 
 1999-04-20  Albrecht Gebhardt  <albrecht.gebhardt@uni-klu.ac.at>
 

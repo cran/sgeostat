@@ -1,4 +1,7 @@
       SUBROUTINE INPLG(X,Y,N,X0,Y0,N0,INPL)
+*     changes: George White, <gnw3@acm.org>
+*        2002-06-27 clean up types for SIGN
+      IMPLICIT NONE
       INTEGER N,N0,INPL(*)
       DOUBLE PRECISION X(*),Y(*),X0(*),Y0(*)
 c
@@ -16,7 +19,7 @@ c     INPL   dimension N0, result code for the points in X0/Y0
 c            1: in polygon, 0: outside
 c
       INTEGER I,J,CRSCNT,OUTCNT
-      DOUBLE PRECISION D0,DJ
+      DOUBLE PRECISION D0,DJ,S0
 c     close polygon
       X(N+1)=X(1)
       Y(N+1)=Y(1)
@@ -45,7 +48,7 @@ c                      I+1
                   D0=X0(J)-X(I)
                   DJ=(Y0(J)-Y(I))*(X(I+1)-X(I))/(Y(I+1)-Y(I))
 c                 change orientation if Y(I+1) > Y(I)
-                  S0=SIGN(1,Y(I+1)-Y(I))
+                  S0=SIGN(1.D0,Y(I+1)-Y(I))
                   IF (S0*D0.LT.S0*DJ) THEN
 c                 point J is on the "outer" side of edge I-->I+1
                      OUTCNT=OUTCNT+1
