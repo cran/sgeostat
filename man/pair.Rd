@@ -52,3 +52,4 @@ maas.pair25 <- pair(maas.point,num.lags=10,type='anisotropic',
 \references{
 http://www.gis.iastate.edu/SGeoStat/homepage.html
 }
+\keyword{sgeostat}

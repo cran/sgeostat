@@ -10,8 +10,7 @@ function (s, point.obj, at, var.mod.obj, maxdist = NULL, extrap = F)
 	    # do nothing outside the convex hull?
 	    # pull out the attribute vector...
 	    if (!extrap) {
-	    	    s$do <- in.convex.hull(tri.mesh(point.obj$x, point.obj$y, 
-	    	    	    duplicate = "remove"), s$x, s$y)
+	    	    s$do <- in.chull(s$x,s$y,point.obj$x,point.obj$y) 
 	    }
 	    at <- point.obj[[match(at, names(point.obj))]]
 	    # if a maxdist hasn't been entered, then use all of the points...

@@ -43,10 +43,15 @@ function(v.object,c0=NULL,ce=NULL,ae=NULL,type='c',iterations=10,
 
 # Begin iterations...
   parameters <- c(c0,ce,ae)
-  cat('Initial parameter estimates: ',parameters,'\n')
-  loop <- T
-  converge <- F
-  i <- 1
+  if(iterations>0){
+    cat('Initial parameter estimates: ',parameters,'\n')
+    loop <- T
+    converge <- F
+    i <- 1
+  } else {
+    loop <- F
+    converge <- F
+  }
 
 # Plot it before we start if requested...
   if (plot.it) {
@@ -126,6 +131,7 @@ function(v.object,c0=NULL,ce=NULL,ae=NULL,type='c',iterations=10,
     cat('Convergence not achieved!\n')
   
 
+  names(parameters)<-c("nugget","sill","range")
   v.m.object <- list(parameters=parameters,
                      model= exponential.v
                     )

@@ -28,3 +28,4 @@ maas.point <- point(maas)
 \references{
 http://www.gis.iastate.edu/SGeoStat/homepage.html
 }
+\keyword{sgeostat}

@@ -23,3 +23,4 @@ par(oldpar)
 \references{
 http://www.gis.iastate.edu/SGeoStat/homepage.html
 }
+\keyword{sgeostat}

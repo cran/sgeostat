@@ -1,4 +1,5 @@
 \name{maas}
+\alias{maas}
 \title{maas- zinc measurements}
 \usage{maas}
 \description{
@@ -12,4 +13,4 @@ Zinc measurements as groundwater quality variable.
   http://www.frw.uva.nl/~pebesma/gstat/
 }
 \seealso{\code{\link{maas.bank}}}
-\keyword{data}
+\keyword{datasets}

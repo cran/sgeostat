@@ -23,3 +23,4 @@ spacebox(maas.point,maas.pair,'zinc')
 \references{
 http://www.gis.iastate.edu/SGeoStat/homepage.html
 }
+\keyword{sgeostat}

@@ -1,66 +1,70 @@
-Fri Dec 24 15:18:57 1999  Albrecht Gebhardt  <albrecht.gebhardt@uni-klu.ac.at>
+2000-12-15  Albrecht Gebhardt  <albrecht.gebhardt@uni-klu.ac.at>
 
-	* man/identify.point.Rd, R/identify.points.R: labels error corrected
+	* INDEX, data/00Index: last changes from build --force
 
-	* man/print.point.Rd, man/plot.point.Rd:
-	examples corrected to pass R CMD check
+	* man/maas.bank.Rd, man/pair.Rd, man/plot.point.Rd, man/plot.variogram.Rd, man/point.Rd, man/print.pair.Rd, man/print.point.Rd, man/sgeostat-internal.Rd, man/spacebox.Rd, man/spacecloud.Rd, man/est.variogram.Rd, man/fit.trend.Rd, man/fit.variogram.Rd, man/identify.point.Rd, man/in.chull.Rd, man/krige.Rd, man/lagplot.Rd, man/maas.Rd, DESCRIPTION, R/est.variogram.R:
+	changes for R 1.2.0
 
-	* DESCRIPTION: next release
+2000-05-12  Albrecht Gebhardt  <albrecht.gebhardt@uni-klu.ac.at>
 
-Sat Dec  4 15:23:45 1999  Albrecht Gebhardt  <albrecht.gebhardt@uni-klu.ac.at>
+	* R/plot.point.R: double argument removed
 
-	* man/spacecloud.Rd, man/spacebox.Rd, man/print.pair.Rd, man/pair.Rd, man/maas.bank.Rd, man/maas.Rd, man/krige.Rd, man/fit.variogram.Rd:
-	various fixes in help files
+2000-04-26  Albrecht Gebhardt  <albrecht.gebhardt@uni-klu.ac.at>
 
-Tue Apr 20 20:46:57 1999  Albrecht Gebhardt  <albrecht.gebhardt@uni-klu.ac.at>
+	* src/inplg.f, R/zzz.R, R/in.chull.R, R/krige.R:
+	in.chull added, removes dependency from tripack
+
+2000-01-11  Albrecht Gebhardt  <alge@epsilon.fuzzy.at>
+
+	* R/fit.wave.R, R/fit.variogram.R, R/fit.spherical.R, R/fit.linear.R, R/fit.gaussian.R, R/fit.exponential.R:
+	options for fit.variogram simplified, iterations=0 for manual fitting allowed
+
+1999-12-24  Albrecht Gebhardt  <albrecht.gebhardt@uni-klu.ac.at>
+
+	* R/identify.points.R: labels error corrected
+
+1999-04-20  Albrecht Gebhardt  <albrecht.gebhardt@uni-klu.ac.at>
 
 	* R/pair.R, R/print.pair.R: renamed files
 
-	* man/Attic/print.pairs.Rd, man/point.Rd, man/plot.variogram.Rd, man/Attic/pairs.Rd, man/lagplot.Rd, man/est.variogram.Rd, data/00Index, R/spacecloud.R, R/spacebox.R, R/Attic/print.pairs.R, R/Attic/pairs.R, R/lagplot.R, R/est.variogram.R, README, INDEX:
+	* man/print.pairs.Rd, man/pairs.Rd, R/spacecloud.R, R/spacebox.R, R/print.pairs.R, R/pairs.R, R/lagplot.R, README:
 	Adopted for R 0.64.x, example() sections should now work.
 	Thanks to Roger Bivand <rsb@reclus.nhh.no> for providing solutions
 	to some of my errors.
 	Renamed "pairs" function and object to "pair" to avoid conflicts with
 	R's "pairs" function.
 
-Tue Sep  8 20:34:15 1998  Albrecht Gebhardt  <albrecht.gebhardt@uni-klu.ac.at>
+1998-09-08  Albrecht Gebhardt  <albrecht.gebhardt@uni-klu.ac.at>
 
-	* R/krige.all.R, R/krige.maxdist.R, R/krige.R: split into several files
+	* R/krige.all.R, R/krige.maxdist.R: split into several files
 
-Mon Aug 24 20:55:20 1998  Albrecht Gebhardt  <albrecht.gebhardt@uni-klu.ac.at>
-
-	* R/zzz.R, R/fit.variogram.R:
-	parameter "type" renamed to "model" (fit.variogram),
-	krige() restricted to convex hull (uses tripack), extrapolation only if
-	wanted.
-
-Thu Jul 16 22:54:54 1998  Albrecht Gebhardt  <albrecht.gebhardt@uni-klu.ac.at>
+1998-07-16  Albrecht Gebhardt  <albrecht.gebhardt@uni-klu.ac.at>
 
 	* R/which.na.R, R/export.point.R: needed for R <-> S compatibility
 
-	* Attic/Changes: cleanup some files
+	* Changes: cleanup some files
 
-Thu May 14 06:41:46 1998  Albrecht Gebhardt  <albrecht.gebhardt@uni-klu.ac.at>
-
-	* www-SGeoStat/DataStructures.html, www-SGeoStat/Download.html, www-SGeoStat/Fit.Exponential.html, www-SGeoStat/Functions.html, www-SGeoStat/Identify.Point.html, www-SGeoStat/Krige.html, www-SGeoStat/Lagplot.html, www-SGeoStat/Pairs.html, www-SGeoStat/Plot.Point.html, www-SGeoStat/Plot.Variogram.html, www-SGeoStat/Point.html, www-SGeoStat/Print.Pairs.html, www-SGeoStat/Print.Point.html, www-SGeoStat/Spacebox.html, www-SGeoStat/Spacecloud.html, www-SGeoStat/Variogram.html, www-SGeoStat/exponential.gif, www-SGeoStat/lagplot.gif, www-SGeoStat/lagplot.query.gif, www-SGeoStat/spacebox.gif, www-SGeoStat/spacecloud.gif, www-SGeoStat/stations.gif, www-SGeoStat/stations.inches.gif, www-SGeoStat/theta.gif, www-SGeoStat/variogram.f.gif, www-SGeoStat/weight.gif:
-	Imported Sources
+1998-05-14  Albrecht Gebhardt  <albrecht.gebhardt@uni-klu.ac.at>
 
 	* www-SGeoStat/DataStructures.html, www-SGeoStat/Download.html, www-SGeoStat/Fit.Exponential.html, www-SGeoStat/Functions.html, www-SGeoStat/Identify.Point.html, www-SGeoStat/Krige.html, www-SGeoStat/Lagplot.html, www-SGeoStat/Pairs.html, www-SGeoStat/Plot.Point.html, www-SGeoStat/Plot.Variogram.html, www-SGeoStat/Point.html, www-SGeoStat/Print.Pairs.html, www-SGeoStat/Print.Point.html, www-SGeoStat/Spacebox.html, www-SGeoStat/Spacecloud.html, www-SGeoStat/Variogram.html, www-SGeoStat/exponential.gif, www-SGeoStat/lagplot.gif, www-SGeoStat/lagplot.query.gif, www-SGeoStat/spacebox.gif, www-SGeoStat/spacecloud.gif, www-SGeoStat/stations.gif, www-SGeoStat/stations.inches.gif, www-SGeoStat/theta.gif, www-SGeoStat/variogram.f.gif, www-SGeoStat/weight.gif:
-	Initial revision
-
-	* R/fit.exponential.R, R/fit.gaussian.R, R/fit.linear.R, R/fit.spherical.R, R/fit.trend.R, R/fit.wave.R, R/plot.variogram.R, R/point.R, R/print.point.R, www-SGeoStat/Introduction.html, www-SGeoStat/OOPLa.html, www-SGeoStat/homepage.html, www-SGeoStat/variogram.gif:
 	Imported Sources
 
-	* R/fit.exponential.R, R/fit.gaussian.R, R/fit.linear.R, R/fit.spherical.R, R/fit.trend.R, R/fit.wave.R, R/plot.variogram.R, R/point.R, R/print.point.R, www-SGeoStat/Introduction.html, www-SGeoStat/OOPLa.html, www-SGeoStat/homepage.html, www-SGeoStat/variogram.gif:
-	Initial revision
+	* www-SGeoStat/DataStructures.html, www-SGeoStat/Download.html, www-SGeoStat/Fit.Exponential.html, www-SGeoStat/Functions.html, www-SGeoStat/Identify.Point.html, www-SGeoStat/Krige.html, www-SGeoStat/Lagplot.html, www-SGeoStat/Pairs.html, www-SGeoStat/Plot.Point.html, www-SGeoStat/Plot.Variogram.html, www-SGeoStat/Point.html, www-SGeoStat/Print.Pairs.html, www-SGeoStat/Print.Point.html, www-SGeoStat/Spacebox.html, www-SGeoStat/Spacecloud.html, www-SGeoStat/Variogram.html, www-SGeoStat/exponential.gif, www-SGeoStat/lagplot.gif, www-SGeoStat/lagplot.query.gif, www-SGeoStat/spacebox.gif, www-SGeoStat/spacecloud.gif, www-SGeoStat/stations.gif, www-SGeoStat/stations.inches.gif, www-SGeoStat/theta.gif, www-SGeoStat/variogram.f.gif, www-SGeoStat/weight.gif:
+	New file.
 
-	* COPYING, R/plot.point.R, data/maas.R, data/maas.bank.R, digi.R, maas.dig, zn_map.eps, zn_map.gif, zn_map.ps:
+	* R/fit.trend.R, R/plot.variogram.R, R/point.R, R/print.point.R, www-SGeoStat/Introduction.html, www-SGeoStat/OOPLa.html, www-SGeoStat/homepage.html, www-SGeoStat/variogram.gif:
 	Imported Sources
 
-	* COPYING, R/plot.point.R, data/maas.R, data/maas.bank.R, digi.R, maas.dig, zn_map.eps, zn_map.gif, zn_map.ps:
-	Initial revision
+	* R/fit.trend.R, R/plot.variogram.R, R/point.R, R/print.point.R, www-SGeoStat/Introduction.html, www-SGeoStat/OOPLa.html, www-SGeoStat/homepage.html, www-SGeoStat/variogram.gif:
+	New file.
+
+	* COPYING, data/maas.R, data/maas.bank.R, digi.R, maas.dig, zn_map.eps, zn_map.gif, zn_map.ps:
+	Imported Sources
+
+	* COPYING, data/maas.R, data/maas.bank.R, digi.R, maas.dig, zn_map.eps, zn_map.gif, zn_map.ps:
+	New file.
 
 	* TITLE: Imported Sources
 
-	* TITLE: Initial revision
+	* TITLE: New file.
 

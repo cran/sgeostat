@@ -1,5 +1,5 @@
 assign("fit.linear",
-function(v.object,type='c',plot.it=F){
+function(v.object,type='c',plot.it=F,iterations=1,c0=0,cl=1){
   # This program fits a univariate linear model to an empirical variogram
   # estimate.  The SEMI variogram model is the model fit...
 
@@ -25,9 +25,15 @@ function(v.object,type='c',plot.it=F){
   h <- h[numobs>0]
   numobs <- numobs[numobs>0]
 
+  if(iterations>0){
+    fit <- lsfit(h,empgamma)
+    parameters <- fit$coef
+  }
+  else
+    parameters <- c(c0,cl)
+  
+  names(parameters)<-c("nugget","slope")
 
-  fit <- lsfit(h,empgamma)
-  parameters <- fit$coef
   v.m.object <- list(parameters=parameters,
                      model= linear.v
                     )

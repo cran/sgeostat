@@ -63,4 +63,3 @@ function(point.obj,pair.obj,a1,a2) {
 
 })
 
-provide(sgeostat)

@@ -1,4 +1,5 @@
 \name{maas.bank}
+\alias{maas.bank}
 \title{maas.bank - coordinates}
 \usage{maas.bank}
 \description{
@@ -12,4 +13,4 @@ Coordinates of maas bank. To be used together with \code{\link{maas}}.
   E.J Pebesma (E.J.Pebesma@frw.uva.nl) 
   http://www.frw.uva.nl/~pebesma/gstat/
 }
-\keyword{data}
+\keyword{datasets}

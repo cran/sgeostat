@@ -43,10 +43,15 @@ function(v.object,c0=NULL,cg=NULL,ag=NULL,type='c',iterations=10,
 
 # Begin iterations...
   parameters <- c(c0,cg,ag)
-  cat('Initial parameter estimates: ',parameters,'\n')
-  loop <- T
-  converge <- F
-  i <- 1
+  if(iterations>0){
+    cat('Initial parameter estimates: ',parameters,'\n')
+    loop <- T
+    converge <- F
+    i <- 1
+  } else {
+    loop <- F
+    converge <- F
+  }
 
 # Plot it before we start if requested...
   if (plot.it) {
@@ -125,7 +130,7 @@ function(v.object,c0=NULL,cg=NULL,ag=NULL,type='c',iterations=10,
   else
     cat('Convergence not achieved!\n')
   
-
+  names(parameters)<-c("nugget","sill","range")
   v.m.object <- list(parameters=parameters,
                      model= gaussian.v
                     )

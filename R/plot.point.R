@@ -1,6 +1,6 @@
 # A plot function for the "point" class of objects
 assign("plot.point",
-function (point.obj,a,axes=F,xlab='',ylab='',legend.pos=0,...) {
+function (point.obj,a,axes=T,xlab='',ylab='',legend.pos=0,...) {
 # Be careful to plot in a square region.  We can't distort the earth!
 # I can't seem to force Splus to use the same scaling on both axes!
 # But we must find a way!

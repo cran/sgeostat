@@ -33,7 +33,7 @@ robust,
   sqrt(|z(x_i)-z(x_j)|) )^4/(0.457 + 0.494/n)}
 
 and median
- \deqn{\gamma_{m}(h)=\frac{(\median_{(i,j) \in N(h)}
+ \deqn{\gamma_{m}(h)=\frac{(\mbox{median}_{(i,j) \in N(h)}
      (\sqrt{|z(x_{i})-z(x_{j})|}))^{4}}{0.457 + \frac{0.494}{|N(h)|}}}{med(h)=(med_(i,j)_in_N(h)
   sqrt(|z(x_i)-z(x_j)|) )^4/(0.457 + 0.494/n)}
  
@@ -50,3 +50,4 @@ maas.v<-est.variogram(maas.point,maas.pair,'zinc')
 \references{
 http://www.gis.iastate.edu/SGeoStat/homepage.html
 }
+\keyword{sgeostat}

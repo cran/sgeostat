@@ -52,12 +52,18 @@ function (v.object, c0 = NULL, cs = NULL, as = NULL, type = "c",
         parameters <- c(c0, cs, as)
         # need two initial parameter estimates to calculate differences
 	# second = first + first * delta %)
-        parameters1 <- c(c0, cs, as) * (1 + delta/100)
-        cat("Initial parameter estimates: \n first:", parameters, "\n second:", 
-                parameters1,"\n")
-        loop <- T
-        converge <- F
-        i <- 1
+        if(iterations>0){
+          parameters1 <- c(c0, cs, as) * (1 + delta/100)
+          cat("Initial parameter estimates: \n first:", parameters, "\n second:", 
+              parameters1,"\n")
+          loop <- T
+          converge <- F
+          i <- 1
+        } else {
+          loop <- F
+          converge <- F
+          parameters1 <- parameters
+        }
         # Plot it before we start if requested...
         if (plot.it) {
                 v.m.object <- list(parameters = parameters, model = spherical.v)
@@ -126,6 +132,9 @@ function (v.object, c0 = NULL, cs = NULL, as = NULL, type = "c",
                 cat("Final parameter estimates: ", parameters1, 
                         "\n\n")
         else cat("Convergence not achieved!\n")
+
+        names(parameters)<-c("nugget","sill","range")
+
         v.m.object <- list(parameters = parameters1, model = spherical.v)
         attr(v.m.object, "class") <- "variogram.model"
         attr(v.m.object, "type") <- "spherical"

@@ -43,9 +43,24 @@ function(v.object,c0=NULL,cw=NULL,aw=NULL,type='c',iterations=10,
 
 # Begin iterations...
   parameters <- c(c0,cw,aw)
-  cat('Initial parameter estimates: ',parameters,'\n')
-  loop <- T
-  i <- 1
+  if(iterations>0){
+    cat('Initial parameter estimates: ',parameters,'\n')
+    loop <- T
+    i <- 1
+  } else {
+    loop <- F
+    converge <- F
+  }
+# Plot it before we start if requested...
+  if (plot.it) {
+    v.m.object <- list(parameters=parameters,
+                       model= wave.v
+                      )
+    attr(v.m.object,'class') <- 'variogram.model'
+    attr(v.m.object,'type') <- 'exponential'
+
+    plot(v.object,v.m.object,type=type)
+  }
   while (loop) {
     cat('Iteration:',i,'\n')
 # establish the Y vector...
@@ -114,6 +129,7 @@ function(v.object,c0=NULL,cw=NULL,aw=NULL,type='c',iterations=10,
   else
     cat('Convergence not achieved!\n')
   
+  names(parameters)<-c("nugget","sill","range")
 
   v.m.object <- list(parameters=parameters,
                      model= wave.v
