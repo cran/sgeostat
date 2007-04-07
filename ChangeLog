@@ -1,17 +1,18 @@
-2004-11-08  Albrecht Gebhardt  <albrecht.gebhardt@uni-klu.ac.at>
+2007-04-07  Albrecht Gebhardt  <albrecht.gebhardt@uni-klu.ac.at>
 
-	* DESCRIPTION, R/zzz.R: now depend on stats instead of mva
+	* DESCRIPTION, R/zzz.R:
+	drop mva (so no longer supports R before 1.9) this is needed for R > 2.6.x compatibility which removes mva finally
 
 2004-05-25  Albrecht Gebhardt  <albrecht.gebhardt@uni-klu.ac.at>
 
 	* INDEX, R/fit.exponential.R, R/fit.spherical.R, R/fit.wave.R, R/in.chull.R, R/in.polygon.R, man/est.variogram.Rd, man/fit.variogram.Rd, man/lagplot.Rd, man/plot.point.Rd, man/spacebox.Rd, man/spacecloud.Rd:
 	small fixes for R 1.9
 
-2002-11-03  Claudia Gebhardt  <cgebhard@pc28-math.math.uni-klu.ac.at>
+2002-11-03  cgebhard  <cgebhard@lambda>
 
 	* makefile: simple makefile added
 
-2002-06-28  alge  <alge@pc28-math.math.uni-klu.ac.at>
+2002-06-28  Albrecht Gebhardt  <alge@lambda>
 
 	* src/inplg.f: INTEGER type fix from George N. White III <gnw3@acm.org>
 
@@ -20,7 +21,7 @@
 	* R/est.variogram.R, R/plot.point.R, R/plot.variogram.R, R/spacebox.R:
 	_ --> <-
 
-2002-05-05  alge  <alge@pc28-math.math.uni-klu.ac.at>
+2002-05-05  Albrecht Gebhardt  <alge@lambda>
 
 	* data/00Index: index updates
 
