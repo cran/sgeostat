@@ -1,18 +1,27 @@
+2009-07-03  Albrecht Gebhardt  <albrecht.gebhardt@uni-klu.ac.at>
+
+	* DESCRIPTION, LICENSE: use canonical LICENSE file
+
+2009-01-25  Albrecht Gebhardt  <albrecht.gebhardt@uni-klu.ac.at>
+
+	* man/identify.point.Rd, man/plot.point.Rd, man/plot.variogram.Rd, man/print.pair.Rd, man/print.point.Rd:
+	fix S3 method documentation
+
 2007-04-07  Albrecht Gebhardt  <albrecht.gebhardt@uni-klu.ac.at>
 
-	* DESCRIPTION, R/zzz.R:
+	* R/zzz.R:
 	drop mva (so no longer supports R before 1.9) this is needed for R > 2.6.x compatibility which removes mva finally
 
 2004-05-25  Albrecht Gebhardt  <albrecht.gebhardt@uni-klu.ac.at>
 
-	* INDEX, R/fit.exponential.R, R/fit.spherical.R, R/fit.wave.R, R/in.chull.R, R/in.polygon.R, man/est.variogram.Rd, man/fit.variogram.Rd, man/lagplot.Rd, man/plot.point.Rd, man/spacebox.Rd, man/spacecloud.Rd:
+	* INDEX, R/fit.exponential.R, R/fit.spherical.R, R/fit.wave.R, R/in.chull.R, R/in.polygon.R, man/est.variogram.Rd, man/fit.variogram.Rd, man/lagplot.Rd, man/spacebox.Rd, man/spacecloud.Rd:
 	small fixes for R 1.9
 
-2002-11-03  cgebhard  <cgebhard@lambda>
+2002-11-03  Claudia Gebhardt  <cgebhard@pc30-math>
 
 	* makefile: simple makefile added
 
-2002-06-28  Albrecht Gebhardt  <alge@lambda>
+2002-06-28  alge  <alge@pc30-math>
 
 	* src/inplg.f: INTEGER type fix from George N. White III <gnw3@acm.org>
 
@@ -21,7 +30,7 @@
 	* R/est.variogram.R, R/plot.point.R, R/plot.variogram.R, R/spacebox.R:
 	_ --> <-
 
-2002-05-05  Albrecht Gebhardt  <alge@lambda>
+2002-05-05  alge  <alge@pc30-math>
 
 	* data/00Index: index updates
 
@@ -32,12 +41,12 @@
 
 2002-01-04  Albrecht Gebhardt  <albrecht.gebhardt@uni-klu.ac.at>
 
-	* R/export.point.R, R/fit.gaussian.R, R/fit.linear.R, R/fit.trend.R, R/identify.point.R, R/krige.R, R/lagplot.R, R/pair.R, man/identify.point.Rd, man/plot.variogram.Rd:
+	* R/export.point.R, R/fit.gaussian.R, R/fit.linear.R, R/fit.trend.R, R/identify.point.R, R/krige.R, R/lagplot.R, R/pair.R:
 	final corrections for 1.4.0
 
 2001-12-29  Albrecht Gebhardt  <albrecht.gebhardt@uni-klu.ac.at>
 
-	* R/print.pair.R, R/print.point.R, man/print.pair.Rd, man/print.point.Rd:
+	* R/print.pair.R, R/print.point.R:
 	changes for R 1.4.0, mostly documentation, some "..." issues and generic
 	method problems
 
@@ -63,7 +72,7 @@
 
 	* R/krige.all.R, R/krige.maxdist.R: split into several files
 
-1998-07-16  Albrecht Gebhardt  <albrecht.gebhardt@uni-klu.ac.at>
+1998-07-17  Albrecht Gebhardt  <albrecht.gebhardt@uni-klu.ac.at>
 
 	* R/which.na.R: needed for R <-> S compatibility
 
