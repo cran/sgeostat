@@ -38,7 +38,7 @@ points is important in describing the variation. Using the theta and dtheta argu
 requirements can be selected. A pair of points will be included when the angle between the positive x axis and the vector
 formed by the pair of points falls within the tolerance angle given by
 \emph{(theta-dtheta,theta+dtheta)}}
-\section{NOTE}{Name of this function changed from \code{pairs} to \code{pair} to avoid conflicts with R's \code{\link[base]{pairs}} function!!}
+\section{NOTE}{Name of this function changed from \code{pairs} to \code{pair} to avoid conflicts with R's \code{\link[graphics]{pairs}} function!!}
 \seealso{\code{\link{point}}}
 \examples{
 \testonly{

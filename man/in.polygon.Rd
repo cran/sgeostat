@@ -14,7 +14,7 @@ in.polygon(x0, y0, x, y)
   \item{y}{  see \code{x}  }
 }
 \details{
-  Uses a simple points-in-polygon check combined with the \code{\link[base]{polygon}}
+  Uses a simple points-in-polygon check combined with the \code{\link[graphics]{polygon}}
   function.
 
   Polygon is closed automatically.
@@ -27,7 +27,7 @@ in.polygon(x0, y0, x, y)
      (available at http://www.netlib.org/tomspdf/112.pdf) }
 \author{ Albrecht Gebhardt <agebhard@uni-klu.ac.at> }
 
-\seealso{ \code{\link[tripack]{in.convex.hull}}, \code{\link[base]{polygon}},  \code{\link{in.chull}} }
+\seealso{ \code{\link[tripack]{in.convex.hull}}, \code{\link[graphics]{polygon}},  \code{\link{in.chull}} }
 
 \examples{
 in.polygon(c(0,1),c(0,1),c(0,1,0,-1),c(-1,0,1,0))

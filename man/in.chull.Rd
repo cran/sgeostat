@@ -14,7 +14,7 @@ in.chull(x0, y0, x, y)
   \item{y}{  see \code{x}  }
 }
 \details{
-  Uses a simple points-in-polygon check combined with the \code{\link[base]{chull}}
+  Uses a simple points-in-polygon check combined with the \code{\link[grDevices]{chull}}
   function.
 }
 \value{
@@ -25,7 +25,7 @@ in.chull(x0, y0, x, y)
      (available at http://www.netlib.org/tomspdf/112.pdf) }
 \author{ Albrecht Gebhardt <agebhard@uni-klu.ac.at> }
 
-\seealso{ \code{\link[tripack]{in.convex.hull}}, \code{\link[base]{chull}} }
+\seealso{ \code{\link[tripack]{in.convex.hull}}, \code{\link[grDevices]{chull}} }
 
 \examples{
 in.chull(c(0,1),c(0,1),c(0,1,0,-1),c(-1,0,1,0))

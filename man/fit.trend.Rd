@@ -14,8 +14,6 @@ fit.trend(point.obj, at, np=2, plot.it=TRUE)
   \item{np}{ degree of polynom to be fitted }
   \item{plot.it}{ switches generation of a contour plot }
 }
-\details{
-}
 \value{
   \item{beta}{estimated parameters}
   ...
@@ -24,7 +22,4 @@ fit.trend(point.obj, at, np=2, plot.it=TRUE)
 http://www.gis.iastate.edu/SGeoStat/homepage.html
 }
 
-\examples{
-}
-\keyword{spatial}%-- one or more ...
 \keyword{spatial}
