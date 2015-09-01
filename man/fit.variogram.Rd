@@ -82,11 +82,12 @@ if(length(ls(pat="maas.v"))==0){example(est.variogram)}
 # automatic fit:
 #
 maas.vmod<-fit.gaussian(maas.v,c0=60000,cg=110000,ag=800,plot.it=TRUE,
-iterations=30)
+                        iterations=30)
 #
 # iterations=0, means no fit, intended for "subjective" fit
 #
-maas.vmod.fixed<-fit.variogram("gaussian",maas.v,nugget=60000,sill=110000,range=800,plot.it=TRUE,iterations=0)
+maas.vmod.fixed<-fit.variogram("gaussian",maas.v,nugget=60000,sill=110000,
+                               range=800,plot.it=TRUE,iterations=0)
 }
 \references{
 http://www.gis.iastate.edu/SGeoStat/homepage.html
