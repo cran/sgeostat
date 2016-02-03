@@ -1,5 +1,6 @@
 8ca43cbc842c2336e835926c2166c28b *COPYING
-ea88c7d82cb0a89d9ed9fcec0a7e35c0 *DESCRIPTION
+a2d7fbcdb6dd0aee93593dc29412f456 *ChangeLog
+b8868d903b711cd0acd68b13900a6668 *DESCRIPTION
 8913451a81fe3224442a503d94d8e57b *INDEX
 d07bec8e500c0a3a8b31eecf42706c0e *NAMESPACE
 d9bd6dc6e5e0bd0bbed201f454548ee9 *R/est.variogram.R
@@ -24,7 +25,7 @@ b03073be2babd735c8edcf7ba56310ef *R/krige.maxdist.R
 cd2de5d9c494b4fa883b874795dc4460 *R/point.R
 ac81b86eb1ce5c0a575b448aa3b9272e *R/print.pair.R
 d7195b1ebb13a4b9938b073a35268a2e *R/print.point.R
-f80ea1978ded3a799b61cb715b01a8a3 *R/spacebox.R
+1250fad24b9b5c6a6fe8ae95ac30329d *R/spacebox.R
 cfae88bec1928876deba7df060cacf7e *R/spacecloud.R
 66f82d7e1949b6b0641f978c38a357b5 *R/which.na.R
 003554d226e9d3f1b482b5a156a1362e *README

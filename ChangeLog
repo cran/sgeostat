@@ -1,66 +1,66 @@
-2013-02-28  Albrecht Gebhardt  <agebhard@uni-klu.ac.at>
+2012-01-08  Albrecht Gebhardt  <albrecht.gebhardt@uni-klu.ac.at>
 
-	* DESCRIPTION, LICENSE: final version of license desription done.
-
-2012-01-08  Albrecht Gebhardt  <agebhard@uni-klu.ac.at>
-
-	* NAMESPACE, R/zzz.R, data/00Index, data/maas.R, data/maas.bank.R, data/maas.bank.rda, data/maas.rda:
+	* DESCRIPTION, NAMESPACE, R/zzz.R, data/00Index, data/maas.R, data/maas.bank.R, data/maas.bank.rda, data/maas.rda:
 	changes for R 2.14.x
 
-2009-09-21  Albrecht Gebhardt  <agebhard@uni-klu.ac.at>
+2009-09-21  Albrecht Gebhardt  <albrecht.gebhardt@uni-klu.ac.at>
 
 	* man/fit.trend.Rd, man/in.chull.Rd, man/in.polygon.Rd, man/pair.Rd:
 	fixes to pass R CMD check version 2.10.0
 
-2009-01-25  Albrecht Gebhardt  <agebhard@uni-klu.ac.at>
+2009-07-03  Albrecht Gebhardt  <albrecht.gebhardt@uni-klu.ac.at>
+
+	* LICENSE: use canonical LICENSE file
+
+2009-01-25  Albrecht Gebhardt  <albrecht.gebhardt@uni-klu.ac.at>
 
 	* man/identify.point.Rd, man/plot.point.Rd, man/plot.variogram.Rd, man/print.pair.Rd, man/print.point.Rd:
 	fix S3 method documentation
 
-2004-05-25  Albrecht Gebhardt  <agebhard@uni-klu.ac.at>
+2004-05-25  Albrecht Gebhardt  <albrecht.gebhardt@uni-klu.ac.at>
 
 	* INDEX, R/fit.exponential.R, R/fit.spherical.R, R/fit.wave.R, R/in.chull.R, R/in.polygon.R, man/est.variogram.Rd, man/fit.variogram.Rd, man/lagplot.Rd, man/spacebox.Rd, man/spacecloud.Rd:
 	small fixes for R 1.9
 
-2002-11-03  Albrecht Gebhardt  <agebhard@uni-klu.ac.at>
+2002-11-03  cgebhard  <cgebhard@lap05-stat>
 
 	* makefile: simple makefile added
 
-2002-06-28  Albrecht Gebhardt  <agebhard@uni-klu.ac.at>
+2002-06-28  Albrecht Gebhardt  <alge@lap05-stat>
 
 	* src/inplg.f: INTEGER type fix from George N. White III <gnw3@acm.org>
 
-2002-05-20  Albrecht Gebhardt  <agebhard@uni-klu.ac.at>
+2002-05-20  Albrecht Gebhardt  <albrecht.gebhardt@uni-klu.ac.at>
 
 	* R/est.variogram.R, R/plot.point.R, R/plot.variogram.R, R/spacebox.R:
 	_ --> <-
 
-2002-05-05  Albrecht Gebhardt  <agebhard@uni-klu.ac.at>
+2002-05-05  Albrecht Gebhardt  <albrecht.gebhardt@uni-klu.ac.at>
 
 	* man/krige.Rd, man/maas.Rd, man/maas.bank.Rd:
 	T/F changes in Rd files for R 1.5.0
 
-2002-01-04  Albrecht Gebhardt  <agebhard@uni-klu.ac.at>
+2002-01-04  Albrecht Gebhardt  <albrecht.gebhardt@uni-klu.ac.at>
 
 	* R/export.point.R, R/fit.gaussian.R, R/fit.linear.R, R/fit.trend.R, R/identify.point.R, R/krige.R, R/lagplot.R, R/pair.R:
 	final corrections for 1.4.0
 
-2001-12-29  Albrecht Gebhardt  <agebhard@uni-klu.ac.at>
+2001-12-29  Albrecht Gebhardt  <albrecht.gebhardt@uni-klu.ac.at>
 
 	* R/print.pair.R, R/print.point.R:
 	changes for R 1.4.0, mostly documentation, some "..." issues and generic
 	method problems
 
-2001-12-19  Albrecht Gebhardt  <agebhard@uni-klu.ac.at>
+2001-12-19  Albrecht Gebhardt  <albrecht.gebhardt@uni-klu.ac.at>
 
 	* R/identify.points.R: more 1.4.0 incompatibilities
 
-2001-08-09  Albrecht Gebhardt  <agebhard@uni-klu.ac.at>
+2001-08-09  Albrecht Gebhardt  <albrecht.gebhardt@uni-klu.ac.at>
 
 	* R/fit.variogram.R, man/point.Rd, man/sgeostat-internal.Rd:
 	cvsroot recovery. finished.
 
-1999-04-20  Albrecht Gebhardt  <agebhard@uni-klu.ac.at>
+1999-04-20  Albrecht Gebhardt  <albrecht.gebhardt@uni-klu.ac.at>
 
 	* man/print.pairs.Rd, man/pairs.Rd, R/pairs.R, R/print.pairs.R, R/spacecloud.R, README:
 	Adopted for R 0.64.x, example() sections should now work.
@@ -69,17 +69,17 @@
 	Renamed "pairs" function and object to "pair" to avoid conflicts with
 	R's "pairs" function.
 
-1998-09-08  Albrecht Gebhardt  <agebhard@uni-klu.ac.at>
+1998-09-08  Albrecht Gebhardt  <albrecht.gebhardt@uni-klu.ac.at>
 
 	* R/krige.all.R, R/krige.maxdist.R: split into several files
 
-1998-07-17  Albrecht Gebhardt  <agebhard@uni-klu.ac.at>
+1998-07-17  Albrecht Gebhardt  <albrecht.gebhardt@uni-klu.ac.at>
 
 	* R/which.na.R: needed for R <-> S compatibility
 
 	* Changes: cleanup some files
 
-1998-05-14  Albrecht Gebhardt  <agebhard@uni-klu.ac.at>
+1998-05-14  Albrecht Gebhardt  <albrecht.gebhardt@uni-klu.ac.at>
 
 	* COPYING, R/point.R, TITLE, digi.R, maas.dig, www-SGeoStat/DataStructures.html, www-SGeoStat/Download.html, www-SGeoStat/Fit.Exponential.html, www-SGeoStat/Functions.html, www-SGeoStat/Identify.Point.html, www-SGeoStat/Introduction.html, www-SGeoStat/Krige.html, www-SGeoStat/Lagplot.html, www-SGeoStat/OOPLa.html, www-SGeoStat/Pairs.html, www-SGeoStat/Plot.Point.html, www-SGeoStat/Plot.Variogram.html, www-SGeoStat/Point.html, www-SGeoStat/Print.Pairs.html, www-SGeoStat/Print.Point.html, www-SGeoStat/Spacebox.html, www-SGeoStat/Spacecloud.html, www-SGeoStat/Variogram.html, www-SGeoStat/exponential.gif, www-SGeoStat/homepage.html, www-SGeoStat/lagplot.gif, www-SGeoStat/lagplot.query.gif, www-SGeoStat/spacebox.gif, www-SGeoStat/spacecloud.gif, www-SGeoStat/stations.gif, www-SGeoStat/stations.inches.gif, www-SGeoStat/theta.gif, www-SGeoStat/variogram.f.gif, www-SGeoStat/variogram.gif, www-SGeoStat/weight.gif, zn_map.eps, zn_map.gif, zn_map.ps:
 	Imported Sources
